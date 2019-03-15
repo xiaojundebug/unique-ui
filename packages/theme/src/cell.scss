@@ -1,0 +1,83 @@
+@import './common/var';
+
+.i-cell {
+  position: relative;
+  display: flex;
+  min-height: 30px;
+  padding: 10px 15px;
+  background-color: #fff;
+  &:not(:first-child)::after {
+    content: ' ';
+    position: absolute;
+    pointer-events: none;
+    box-sizing: border-box;
+    left: 15px;
+    right: 0;
+    top: 0;
+    transform: scaleY(0.5);
+    transform-origin: 0 0;
+    border-bottom: 1px solid $border-color;
+  }
+
+  &__icon {
+    margin-right: 5px;
+    .fa {
+      font-size: 16px;
+    }
+    img {
+      max-height: 32px;
+    }
+  }
+
+  &__hd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__bd {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 8px; 
+  }
+
+  &__ft {
+    margin-left: 8px;
+    img {
+      max-height: 32px;
+    }
+  }
+
+  &__icon,
+  &__ft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    line-height: 28px;
+  }
+  &__desc {
+    font-size: 12px;
+  }
+
+  &__desc,
+  &__value,
+  &__arrow {
+    color: #838993;
+  }
+
+  &__arrow.fa {
+    font-size: 20px;
+  }
+
+  &--clickable {
+    cursor: pointer;
+    &:active {
+      background-color: $border-color;
+    }
+  }
+}

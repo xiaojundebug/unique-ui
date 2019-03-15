@@ -1,0 +1,110 @@
+.doc-container h1,
+.doc-container h2,
+.doc-container h3,
+.doc-container h4,
+.doc-container h5,
+.doc-container h6 {
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 20px 0 10px;
+  color: #333;
+}
+
+.doc-container h2 {
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.doc-container h3 {
+  font-size: 22px;
+  margin-top: 45px;
+}
+
+.doc-container h4 {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.doc-container p {
+  margin: 15px 0;
+  font-size: 14px;
+  line-height: 26px;
+  color: #34495e;
+}
+
+.doc-container li > code,
+.doc-container p > code,
+.doc-container table code {
+  display: inline;
+  margin: 2px;
+  padding: 2px 7px;
+  border-radius: 2px;
+  color: #e96900;
+  background-color: #f8f8f8;
+}
+
+.doc-container br + code {
+  margin-left: 0;
+}
+
+.doc-container pre.hljs {
+  background: #f6f8fa;
+  padding: 1.3em;
+  line-height: 1.5em;
+}
+
+.doc-container code {
+  font-family: 'Fira Code Retina', 'Source Code Pro', Consolas, 'PingFang SC';
+}
+
+.doc-container table {
+  width: 100%;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 45px;
+  background-color: #fff;
+  border-collapse: collapse;
+  color: #34495e;
+}
+
+.doc-container table th {
+  padding: 10px;
+  text-align: left;
+  font-weight: 400;
+  background-color: #f1f4f8;
+}
+.doc-container table td {
+  padding: 10px;
+  border-bottom: 1px solid #f1f4f8;
+}
+
+.doc-container a {
+  color: #008df6;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.doc-container blockquote {
+  border-left: 4px solid #dcdcdc;
+  margin: 20px 0;
+  padding: 0 15px;
+  p {
+    margin: 0;
+  }
+}
+
+.doc-container ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.doc-container ul > li {
+  list-style: circle;
+  line-height: 32px;
+}

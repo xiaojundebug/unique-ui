@@ -1,0 +1,16 @@
+{
+  "root": true,
+  "extends": ["plugin:vue-libs/recommended", "plugin:vue/strongly-recommended"],
+  "rules": {
+    "space-before-function-paren": ["error", "never"],
+    "vue/html-self-closing": 0,
+    "vue/require-default-prop": 0,
+    "vue/require-v-for-key": 0,
+    "vue/max-attributes-per-line": [
+      2,
+      {
+        "singleline": 1
+      }
+    ]
+  }
+}

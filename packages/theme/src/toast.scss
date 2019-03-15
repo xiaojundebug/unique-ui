@@ -1,0 +1,29 @@
+.i-toast {
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 70%;
+  box-sizing: content-box;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 20px;
+  word-break: break-all;
+  color: #fff;
+  transform: translate3d(-50%, 0, 0);
+  background-color: rgba(0, 0, 0, 0.7);
+  &--top {
+    top: 100px;
+    bottom: inherit;
+  }
+  &--center {
+    top: 50%;
+    bottom: inherit;
+    transform: translate3d(-50%, -50%, 0);
+  }
+}

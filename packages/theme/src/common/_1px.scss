@@ -1,0 +1,36 @@
+@import './var';
+
+[class*='i-1px'] {
+  position: relative;
+
+  &::after {
+    content: ' ';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    transform: scale(0.5);
+    border: 0 solid $border-color;
+    box-sizing: border-box;
+    pointer-events: none;
+  }
+}
+
+.i-1px {
+  &::after {
+    border-width: 1px;
+  }
+  &--t::after {
+    border-top-width: 1px;
+  }
+  &--r::after {
+    border-right-width: 1px;
+  }
+  &--b::after {
+    border-bottom-width: 1px;
+  }
+  &--l::after {
+    border-left-width: 1px;
+  }
+}

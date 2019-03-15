@@ -1,0 +1,29 @@
+.i-slide {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  &__track {
+    height: 100%;
+    user-select: none;
+  }
+  &__indicators {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__indicator {
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    margin: 0 2px;
+    background-color: rgba(0, 0, 0, 0.3);
+    &.active {
+      background-color: orange;
+    }
+  }
+}

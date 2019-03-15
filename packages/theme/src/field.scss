@@ -1,0 +1,31 @@
+.i-field {
+  .i-cell__hd {
+    width: 90px;
+  }
+  &__body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  &__control {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: transparent;
+    &:disabled {
+      opacity: 1;
+      color: #999;
+      -webkit-text-fill-color: #999;
+    }
+    &::placeholder {
+      color: #bbb;
+    }
+  }
+  &__clear {
+    font-size: 20px;
+    color: #ccc;
+  }
+}

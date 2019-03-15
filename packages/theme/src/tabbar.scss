@@ -1,0 +1,20 @@
+@import './common/var';
+
+.i-tabbar {
+  height: $tab-bar-height;
+  &__inner {
+    position: relative;
+    display: flex;
+    height: $tab-bar-height;
+    background-color: #fff;
+  }
+  &--fixed {
+    .i-tabbar__inner {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.i-sticky {
+  &__inner {
+    position: relative;
+    width: 100%;
+  }
+  &--native {
+    position: sticky;
+  }
+  &--simulate {
+    .i-sticky__inner {
+      position: fixed;
+    }
+  }
+}

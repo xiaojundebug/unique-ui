@@ -1,0 +1,63 @@
+@import './common/var';
+
+.i-notice-bar {
+  &__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    font-size: 14px;
+    background: #ffebc4;
+    color: #df9952;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    margin-right: 2px;
+  }
+
+  &__main {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  &__content {
+    line-height: 20px;
+    white-space: nowrap;
+    &.ellipsis {
+      max-width: 100%;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    margin-left: 2px;
+  }
+  &__right-icon {
+    font-size: 21px;
+  }
+
+  &--play {
+    animation: notice-bar-slideInRight linear both;
+  }
+
+  &--loop {
+    animation: notice-bar-slideInRight--loop linear infinite both;
+  }
+}
+
+@keyframes notice-bar-slideInRight {
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes notice-bar-slideInRight--loop {
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}

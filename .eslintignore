@@ -1,0 +1,4 @@
+lib
+examples
+node_modules
+packages/**/demo

@@ -1,0 +1,65 @@
+@import './common/var';
+
+.i-nav-bar {
+  height: $nav-bar-height;
+  &__inner {
+    position: relative;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+    height: $nav-bar-height;
+    background-color: #fff;
+    color: $primary-color;
+  }
+  &__left {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &:active {
+      opacity: 0.5;
+    }
+    .i-nav-bar__arrow {
+      font-size: 25px;
+      margin-top: -1px;
+    }
+    .i-nav-bar__text {
+      font-size: 14px;
+      margin-left: -6px;
+    }
+  }
+  &__title {
+    max-width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 16px;
+    color: $color-dark;
+  }
+  &__right {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &:active {
+      opacity: 0.5;
+    }
+  }
+  &--fixed {
+    .i-nav-bar__inner {
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+}

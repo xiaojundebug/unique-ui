@@ -1,0 +1,51 @@
+@import './common/var';
+
+.i-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: $tag-height;
+  padding: 0 7px;
+  border-radius: $border-radius;
+  background-color: $primary-color;
+  color: $color-light;
+  font-size: 12px;
+  &::after {
+    border-radius: $border-radius * 2;
+    border-color: currentColor;
+  }
+  &--info {
+    background-color: $info-color;
+  }
+  &--warning {
+    background-color: $warning-color;
+  }
+  &--success {
+    background-color: $success-color;
+  }
+  &--danger {
+    background-color: $danger-color;
+  }
+  &--round {
+    border-radius: $tag-height / 2;
+  }
+  &--plain {
+    background-color: transparent;
+    color: $primary-color;
+    &.i-tag--info {
+      color: $info-color;
+    }
+    &.i-tag--warning {
+      color: $warning-color;
+    }
+    &.i-tag--success {
+      color: $success-color;
+    }
+    &.i-tag--danger {
+      color: $danger-color;
+    }
+    &.i-tag--round::after {
+      border-radius: $tag-height;
+    }
+  }
+}
