@@ -28,7 +28,7 @@ module.exports = {
       packages: path.resolve(__dirname, '../packages')
     }
   },
-  externals: [/^normalize\.css$/, /^font-awesome/],
+  // externals: [/^normalize\.css$/, /^font-awesome/],
   // webpack-dev-server
   devServer: {
     contentBase: path.resolve(__dirname, '../examples/dist'),

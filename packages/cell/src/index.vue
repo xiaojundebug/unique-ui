@@ -11,7 +11,9 @@
         <i :class="`fa fa-fw fa-${this.icon}`"/>
       </slot>
     </div>
-    <div class="i-cell__hd">
+    <div
+      v-if="hdIsShow"
+      class="i-cell__hd">
       <slot name="title">
         <span class="i-cell__title">{{ title }}</span>
         <span
@@ -64,6 +66,9 @@ export default {
     },
     clickable() {
       return this.isLink || this.to
+    },
+    hdIsShow() {
+      return this.title || this.$slots.title || this.desc
     }
   },
   methods: {

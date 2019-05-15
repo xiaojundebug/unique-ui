@@ -6,19 +6,6 @@
   min-height: 30px;
   padding: 10px 15px;
   background-color: #fff;
-  &:not(:first-child)::after {
-    content: ' ';
-    position: absolute;
-    pointer-events: none;
-    box-sizing: border-box;
-    left: 15px;
-    right: 0;
-    top: 0;
-    transform: scaleY(0.5);
-    transform-origin: 0 0;
-    border-bottom: 1px solid $border-color;
-  }
-
   &__icon {
     margin-right: 5px;
     .fa {
@@ -33,6 +20,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-right: 8px; 
   }
 
   &__bd {
@@ -40,7 +28,6 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-left: 8px; 
   }
 
   &__ft {

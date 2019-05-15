@@ -1,29 +1,50 @@
 .i-toast {
-  position: fixed;
-  bottom: 100px;
-  left: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  max-width: 70%;
-  box-sizing: content-box;
-  padding: 8px 12px;
-  border-radius: 4px;
-  font-size: 14px;
-  line-height: 20px;
-  word-break: break-all;
+  background-color: rgba(50, 50, 51, 0.88);
   color: #fff;
-  transform: translate3d(-50%, 0, 0);
-  background-color: rgba(0, 0, 0, 0.7);
-  &--top {
-    top: 100px;
-    bottom: inherit;
+  z-index: 9999;
+  overflow: hidden;
+  &__text {
+    font-size: 14px;
+    line-height: 2;
   }
-  &--center {
-    top: 50%;
-    bottom: inherit;
-    transform: translate3d(-50%, -50%, 0);
+  &__icon {
+    i {
+      font-size: 40px;
+    }
+  }
+  &--normal {
+    top: auto;
+    bottom: 75px;
+    width: fit-content;
+    max-width: 80%;
+    padding: 10px 30px;
+    border-radius: 100px;
+  }
+  &--loading,
+  &--success,
+  &--fail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    .toast__icon {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      i {
+        font-size: 40px;
+      }
+    }
+    .toast__text {
+      width: 100%;
+      margin-top: 5px;
+    }
   }
 }

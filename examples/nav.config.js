@@ -80,6 +80,12 @@ export default [
         routePath: '/notice-bar',
         doc: () => import('docs/notice-bar'),
         demo: () => import('packages/notice-bar/demo')
+      },
+      {
+        name: 'Popup 弹出层',
+        routePath: '/popup',
+        doc: () => import('docs/popup'),
+        demo: () => import('packages/popup/demo')
       }
     ]
   },
@@ -88,7 +94,7 @@ export default [
     list: [
       {
         name: 'Field 输入框',
-        routePath: '/input',
+        routePath: '/field',
         doc: () => import('docs/field'),
         demo: () => import('packages/field/demo')
       },

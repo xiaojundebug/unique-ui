@@ -1,6 +1,22 @@
+@import './common/var';
+
 .i-cell-group {
   background-color: #fff;
   &:not(:last-child) {
     margin-bottom: 10px;
+  }
+  .i-cell {
+    &:not(:first-child)::after {
+      content: '';
+      position: absolute;
+      pointer-events: none;
+      box-sizing: border-box;
+      left: 0.3rem;
+      right: 0;
+      top: 0;
+      transform: scaleY(0.5);
+      transform-origin: 0 0;
+      border-bottom: 1px solid $border-color;
+    }
   }
 }

@@ -5,7 +5,7 @@
     <slot
       name="icon"
       :value="value"><i
-        class="i-checkbox__icon icon-checkmark"
+        class="i-checkbox__icon icon icon-check"
         :style="iconStyle" /></slot>
     <span
       class="i-checkbox__label"

@@ -2,18 +2,22 @@
   <i-cell
     :class="classList"
     :title="label"
-    :icon="icon"
-  >
+    :icon="icon">
     <div
       v-if="$slots['icon']"
-      slot="icon"
-    >
+      slot="icon">
       <slot name="icon"></slot>
     </div>
-    <div class="i-field__body">
+    <template>
       <textarea
         v-if="type === 'textarea'"
+        v-bind="$attrs"
+        v-on="listeners"
         ref="control"
+        :class="controlClassList"
+        :style="controlStyle"
+        :value="value"
+        :readonly="readonly"
       ></textarea>
       <input
         v-else
@@ -28,14 +32,12 @@
       >
       <i
         v-if="showClear"
-        class="i-field__clear icon-close-circle"
-        @touchstart.prevent="onClear"
-      ></i>
-    </div>
+        class="i-field__clear icon icon-close-circle"
+        @touchstart.prevent="onClear"></i>
+    </template>
     <div
       v-if="$slots['right-icon']"
-      slot="right-icon"
-    >
+      slot="right-icon">
       <slot name="right-icon"></slot>
     </div>
   </i-cell>
@@ -56,7 +58,8 @@ export default {
     labelAlign: String,
     inputAlign: String,
     clearable: Boolean,
-    readonly: Boolean
+    readonly: Boolean,
+    bordered: Boolean
   },
   data() {
     return {
@@ -65,7 +68,12 @@ export default {
   },
   computed: {
     classList() {
-      return ['i-field', {}]
+      return [
+        'i-field',
+        {
+          bordered: this.bordered
+        }
+      ]
     },
     controlClassList() {
       return ['i-field__control']
@@ -96,7 +104,6 @@ export default {
     onFocus(ev) {
       this.focused = true
       this.$emit('focus', ev)
-
       if (this.readonly) this.$refs['control'].blur()
     },
     onBlur(ev) {

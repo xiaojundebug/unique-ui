@@ -1,29 +1,76 @@
 <template>
-  <transition name="fade">
+  <i-popup
+    :class="toastClassName"
+    :style="toastStyle"
+    :show="show"
+    :overlay="overlay"
+    :overlay-opacity="0"
+    transition-name="fadeIn"
+    @clickOverlay="onClickOverlay"
+    @touchmove.prevent
+  >
+    <div class="toast__icon">
+      <slot name="icon">
+        <i-loading
+          v-if="type == 'loading'"
+          type="ios"
+          color="#fff"></i-loading>
+        <i
+          v-else-if="type == 'success'"
+          class="icon icon-success"></i>
+        <i
+          v-else-if="type == 'fail'"
+          class="icon icon-fail"></i>
+      </slot>
+    </div>
     <div
-      v-if="show"
-      :class="classList"
-    >{{ msg }}</div>
-  </transition>
+      v-if="text || $slots.text"
+      class="toast__text ellipsis">
+      <slot name="text">{{ text }}</slot>
+    </div>
+  </i-popup>
 </template>
 
 <script>
 export default {
   name: 'IToast',
-  props: {
-    position: String
+  model: {
+    prop: 'show',
+    event: 'toggle'
   },
-  data() {
-    return {
-      show: false,
-      msg: ''
-    }
+  components: {},
+  props: {
+    show: {
+      type: Boolean,
+      default: false
+    },
+    overlay: {
+      type: Boolean,
+      default: true
+    },
+    type: {
+      type: String,
+      default: 'normal'
+    },
+    text: String
   },
   computed: {
-    classList() {
-      return ['i-toast', `i-toast--${this.position}`]
+    toastClassName() {
+      return [
+        'i-toast',
+        {
+          [`i-toast--${this.type}`]: this.type
+        }
+      ]
+    },
+    toastStyle() {
+      return {}
     }
   },
-  methods: {}
+  methods: {
+    onClickOverlay(val) {
+      // this.$emit('toggle', val)
+    }
+  }
 }
 </script>

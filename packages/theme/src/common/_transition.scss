@@ -1,10 +1,69 @@
-/* fade
+/* 淡入
 -------------------------- */
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s;
+.fadeIn-enter-active,
+.fadeIn-leave-active {
+  transition: opacity 0.3s !important;
 }
-.fade-enter,
-.fade-leave-to {
+.fadeIn-enter,
+.fadeIn-leave-to {
+  opacity: 0 !important;
+}
+
+/* 从上面滑动到下面
+-------------------------- */
+.slideInDown-enter-active,
+.slideInDown-leave-active {
+  transition: transform 0.35s !important;
+}
+.slideInDown-enter,
+.slideInDown-leave-to {
+  transform: translate3d(0, -100%, 0) !important;
+}
+
+/* 从右面滑动到左面
+-------------------------- */
+.slideInRight-enter-active,
+.slideInRight-leave-active {
+  transition: transform 0.35s !important;
+}
+.slideInRight-enter,
+.slideInRight-leave-to {
+  transform: translate3d(100%, 0, 0) !important;
+}
+
+/* 从左面滑动到右面
+-------------------------- */
+.slideInLeft-enter-active,
+.slideInLeft-leave-active {
+  transition: transform 0.35s !important;
+}
+.slideInLeft-enter,
+.slideInLeft-leave-to {
+  transform: translate3d(-100%, 0, 0) !important;
+}
+
+/* 从下面滑动到上面
+-------------------------- */
+.slideInUp-enter-active,
+.slideInUp-leave-active {
+  transition: transform 0.35s !important;
+}
+.slideInUp-enter,
+.slideInUp-leave-to {
+  transform: translate3d(0, 100%, 0) !important;
+}
+
+/* 从中间淡入放大
+-------------------------- */
+.zoomIn-enter-active,
+.zoomIn-leave-active {
+  transition: opacity 0.3s, transform 0.3s !important;
+}
+.zoomIn-enter {
   opacity: 0;
+  transform: translate3d(-50%, -50%, 0) scale(0.7) !important;
+}
+.zoomIn-leave-to {
+  opacity: 0;
+  transform: translate3d(-50%, -50%, 0) scale(0.9) !important;
 }

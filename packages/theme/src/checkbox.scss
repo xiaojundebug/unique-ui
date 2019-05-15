@@ -9,7 +9,11 @@
   &__icon {
     border: 1px solid #ddd;
     border-radius: 50%;
-    font-size: $checkbox-size - 2px;
+    width: 17px;
+    height: 17px;
+    text-align: center;
+    line-height: 18px;
+    font-size: 14px;
     color: transparent;
     transition: 0.2s;
   }

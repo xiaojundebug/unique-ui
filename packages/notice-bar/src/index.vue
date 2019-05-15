@@ -22,7 +22,8 @@
           :style="contentStyle"
           ref="content"
           @animationend="onAnimationEnd"
-          @webkitAnimationEnd="onAnimationEnd">
+          @webkitAnimationEnd="onAnimationEnd"
+        >
           <slot>{{ text }}</slot>
         </div>
       </div>
@@ -31,7 +32,9 @@
         class="i-notice-bar__right"
         v-if="mode || $slots.right"
         @click.stop="onClickRight">
-        <slot name="right"><i :class="rightIconClassName"></i></slot>
+        <slot name="right">
+          <i :class="rightIconClassName"></i>
+        </slot>
       </div>
     </div>
   </div>
@@ -85,7 +88,8 @@ export default {
       if (!this.mode) return
       return [
         'i-notice-bar__right-icon',
-        this.mode === 'closeable' ? 'icon-close-circle-outline' : 'icon-arrow-forward'
+        'icon',
+        this.mode === 'closeable' ? 'icon-close-circle' : 'icon-arrow-right'
       ]
     },
     contentClass() {

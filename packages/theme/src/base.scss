@@ -1,4 +1,4 @@
-@import './fonts/style.css';
+// @import './fonts/style.css';
 @import './common/var';
 @import './common/1px';
 @import './common/ellipsis';
@@ -10,6 +10,7 @@ body {
   color: $color-dark;
 }
 button,
-input {
+input,
+textarea {
   outline: none;
 }

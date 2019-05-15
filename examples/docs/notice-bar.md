@@ -43,7 +43,7 @@ export default {
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|
 | text | 文本消息| `String` | `''` |
-| mode | 模式 | `String`，可令选为`closeable` `link` | `''` |
+| mode | 模式 | `String`，可另选为`closeable` `link` | `''` |
 | scrollable | 超出一行自动滚动 | `Boolean` | `true` |
 | speed | 滚动速率 (px/s) | `Number` | `50` |
 | delay | 动画延迟时间 (s) | `Number` | `1` |

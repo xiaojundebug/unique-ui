@@ -2,30 +2,51 @@
 
 ### 代码演示
 
+```javascript
+export default {
+  data() {
+    return {
+      value1: '',
+      value2: '',
+      value3: '',
+      value4: ''
+    }
+  }
+}
+```
+
 #### 简单用法
 
 ```html
 <i-cell-group>
-  <i-field v-model="value1" label="账号"></i-field>
+  <i-field v-model="value1" label="账号" clearable></i-field>
 </i-cell-group>
 ```
 
-#### 设置类型
-
-```html
-<i-cell-group>
-  <i-field v-model="value2" label="Username" clearable></i-field>
-  <i-field v-model="value3" label="Password" type="password" clearable></i-field>
-</i-cell-group>
-```
-
-#### 禁用
+#### 原生属性
 
 本组件支持所有原生属性
 
 ```html
 <i-cell-group>
+  <i-field v-model="value2" label="Password" type="password" clearable></i-field>
   <i-field label="用户名" disabled value="该输入框已禁用"></i-field>
+</i-cell-group>
+```
+
+#### 多行输入
+
+将`type`设置为`textarea`可以将默认的`input`组件更改为`textarea`组件，支持`rows`等原生属性，
+
+```html
+<i-cell-group>
+  <i-field
+    v-model="value3"
+    type="textarea"
+    rows="4"
+    placeholder="这是一个textarea，rows设置为了4"
+    clearable
+  ></i-field>
 </i-cell-group>
 ```
 
@@ -40,7 +61,7 @@
 </i-cell-group>
 ```
 
-### Field Props
+### Props
 
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|
@@ -51,13 +72,13 @@
 | clearable | 是否显示清空按钮 | `Boolean` | `false` |
 | readonly | 是否只读 | `Boolean` | `false` |
 
-### Field Slots
+### Slots
 
 | 参数 | 说明 |
 |------|------|
 | icon | 左侧图标 |
 | right-icon | 右侧图标 |
 
-### Field Events
+### Events
 
 本组件支持所有原生事件

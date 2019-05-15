@@ -21,6 +21,7 @@ import NoticeBar from 'packages/notice-bar'
 import RadioGroup from 'packages/radio-group'
 import Radio from 'packages/radio'
 import Field from 'packages/field'
+import Popup from 'packages/Popup'
 import Toast from 'packages/toast'
 
 const components = [
@@ -44,7 +45,8 @@ const components = [
   NoticeBar,
   RadioGroup,
   Radio,
-  Field
+  Field,
+  Popup
 ]
 
 export {
@@ -69,6 +71,7 @@ export {
   RadioGroup,
   Radio,
   Field,
+  Popup,
   Toast
 }
 
