@@ -2,8 +2,6 @@
 
 > `Popup` 组件在整个组件库中是一个十分重要的基本组件，很多弹出类组件都依赖于它
 
-### 代码演示
-
 ```javascript
 export default {
   data() {
@@ -51,17 +49,14 @@ export default {
 .zoomInUp-leave-active {
   transition: opacity 0.3s, transform 0.3s;
 }
-.zoomInUp-enter {
-  opacity: 0;
-  transform: translate3d(-50%, 100%, 0) scale(0);
-}
+.zoomInUp-enter,
 .zoomInUp-leave-to {
   opacity: 0;
   transform: translate3d(-50%, 100%, 0) scale(0);
 }
 ```
 
-### Props
+#### Props
 
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|
@@ -72,7 +67,7 @@ export default {
 | overlayColor | 蒙版颜色 | `String` | `#000` |
 | transitionName | 同`vue`中`transition`的`name`属性，仅作用于弹层部分 | `String` | 取决于`position` |
 
-### Events
+#### Events
 
 | 事件名 | 说明 | 参数 |
 |------|------|------|

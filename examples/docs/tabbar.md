@@ -1,7 +1,5 @@
 ## Tabbar 标签栏
 
-### 代码演示
-
 #### 简单用法
 
 ```html
@@ -70,7 +68,7 @@ export default {
 }
 ```
 
-### Tabbar Props
+#### Tabbar Props
 
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|
@@ -79,7 +77,7 @@ export default {
 | active-color | 已激活文字的颜色 | `String` | 主题色 |
 | fixed | 是否固定在底部 | `Boolean` | `true` |
 
-### TabbarItem Props
+#### TabbarItem Props
 
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|
@@ -88,13 +86,13 @@ export default {
 | icon | 图标 | `String` | `''` |
 | dot | 是否显示图标右上角小红点 | `Boolean` | `''` |
 
-### TabbarItem Slots
+#### TabbarItem Slots
 
 | 名称 | 说明 | slot-scope |
 |------|------|------|
 | icon | 自定义图标 | active: 是否为选中标签 |
 
-### Tabbar Events
+#### Tabbar Events
 
 | 事件名 | 说明 | 参数 |
 |------|------|------|

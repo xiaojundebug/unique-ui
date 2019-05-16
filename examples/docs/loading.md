@@ -1,7 +1,5 @@
 ## Loading 加载
 
-### 代码演示
-
 #### 简单用法
 
 ```html
@@ -32,7 +30,7 @@
 <i-loading type="crescent" color="#26c6f4"></i-loading>
 ```
 
-### Props
+#### Props
 
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|

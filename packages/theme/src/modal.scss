@@ -1,0 +1,55 @@
+@import './common/var';
+
+.i-modal {
+  background-color: #fff;
+  border-radius: 5px;
+  &__title {
+    padding-top: 30px;
+    text-align: center;
+    color: #1d273c;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  &__body {
+    padding: 20px 25px 25px 25px;
+    color: #535d72;
+    font-size: 16px;
+    text-align: center;
+  }
+  &__footer {
+  }
+  &__btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .button:not(:first-child) {
+      margin-left: 12px;
+    }
+  }
+  &__confirm-btn,
+  &__cancel-btn {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    &:active {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  }
+  &__confirm-btn {
+    color: $info-color;
+  }
+  &__alert-btn {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 15px;
+    color: $primary-color;
+    cursor: pointer;
+    &:active {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  }
+}

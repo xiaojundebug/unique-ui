@@ -1,7 +1,5 @@
 ## Radio 单选框
 
-### 代码演示
-
 ```javascript
 export default {
   // 示例数据
@@ -78,14 +76,14 @@ export default {
 </i-radio-group>
 ```
 
-### RadioGroup Props
+#### RadioGroup Props
 
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|
 | value | 被选中项的`value`值 | `Boolean | Number | String` | - |
 | disabled | 是否禁用所有单选框 | `Boolean` | `false` |
 
-### Radio Props
+#### Radio Props
 
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|
@@ -93,13 +91,13 @@ export default {
 | disabled | 是否禁用该单选框 | `Boolean` | `false` |
 | color | 选中状态图标背景色 | `String` | 主题色 |
 
-### Radio Slots
+#### Radio Slots
 
 | 名称 | 说明 | slot-scope |
 |------|------|------|
 | icon | 自定义图标 | checked: 该单选框是否被选中 |
 
-### RadioGroup Events
+#### RadioGroup Events
 
 | 事件名 | 说明 | 参数 |
 |------|------|------|

@@ -1,7 +1,5 @@
 ## Field 输入框
 
-### 代码演示
-
 ```javascript
 export default {
   data() {
@@ -61,7 +59,7 @@ export default {
 </i-cell-group>
 ```
 
-### Props
+#### Props
 
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|
@@ -72,13 +70,13 @@ export default {
 | clearable | 是否显示清空按钮 | `Boolean` | `false` |
 | readonly | 是否只读 | `Boolean` | `false` |
 
-### Slots
+#### Slots
 
 | 参数 | 说明 |
 |------|------|
 | icon | 左侧图标 |
 | right-icon | 右侧图标 |
 
-### Events
+#### Events
 
 本组件支持所有原生事件

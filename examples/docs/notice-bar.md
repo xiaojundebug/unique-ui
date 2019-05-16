@@ -1,7 +1,5 @@
 ## NoticeBar 通告栏
 
-### 代码演示
-
 ```javascript
 export default {
   // 示例数据
@@ -38,7 +36,7 @@ export default {
 </i-notice-bar>
 ```
 
-### Props
+#### Props
 
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|
@@ -50,14 +48,14 @@ export default {
 | background-color | 背景色 | `String` | `#ffebc4` |
 | color | 文字颜色 | `String` | `#df9952` |
 
-### Slots
+#### Slots
 
 | 名称 | 说明 |
 |------|------|
 | left | 自定义左侧区域内容 |
 | right | 自定义右侧区域内容 |
 
-### Events
+#### Events
 
 | 事件名 | 说明 | 参数 |
 |------|------|------|

@@ -2,8 +2,6 @@
 
 基于`flex`实现，提供`i-row`和`i-col`两个组件进行布局
 
-### 代码演示
-
 #### 简单用法
 
 提供了`24`列栅格，可以在`col`上添加`span`属性设置该列所占格数，还可以通过`offset`属性设置偏移格数
@@ -90,7 +88,7 @@
 </i-row>
 ```
 
-### Row Props
+#### Row Props
 
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|
@@ -98,7 +96,7 @@
 | justify | 主轴对齐方式，可选值为 `start` `center` `end`<br>`space-around` `space-between` | `String` | `start` |
 | align | 交叉轴对齐方式，可选值为 `top` `center` `bottom` | `String` | `top` |
 
-### Col Props
+#### Col Props
 
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|

@@ -1,7 +1,5 @@
 ## Cell 单元格
 
-### 代码演示
-
 #### 简单用法
 
 ```html
@@ -36,7 +34,7 @@
 </i-cell-group>
 ```
 
-### Cell Props
+#### Cell Props
 
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|
@@ -48,7 +46,7 @@
 | to | 同`vue-router`里的`to`，该选项会默认启用`is-link` | `String | Object` | - |
 | replace | 路由跳转时使用`replace`而不是`push` | `Boolean` | `false` |
 
-### Cell Slots
+#### Cell Slots
 
 | 参数 | 说明 |
 |------|------|
@@ -57,7 +55,7 @@
 | value | 右侧内容 |
 | right-icon | 右侧图标 |
 
-### Cell Events
+#### Cell Events
 
 | 事件名 | 说明 | 参数 |
 |------|------|------|

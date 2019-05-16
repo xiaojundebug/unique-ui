@@ -2,7 +2,7 @@
   <div class="demo-toast">
     <demo-block title="简单用法">
       <div class="wrapper">
-        <i-button @click="$toast('hello~')">show</i-button>
+        <i-button @click="$toast('hello~')">简单用法</i-button>
       </div>
     </demo-block>
     <demo-block title="不同类型">

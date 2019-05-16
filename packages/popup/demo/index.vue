@@ -69,10 +69,7 @@ export default {
   .zoomInUp-leave-active {
     transition: opacity 0.3s, transform 0.3s;
   }
-  .zoomInUp-enter {
-    opacity: 0;
-    transform: translate3d(-50%, 100%, 0) scale(0);
-  }
+  .zoomInUp-enter,
   .zoomInUp-leave-to {
     opacity: 0;
     transform: translate3d(-50%, 100%, 0) scale(0);

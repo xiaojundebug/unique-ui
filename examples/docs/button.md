@@ -1,7 +1,5 @@
 ## Button 按钮
 
-### 代码演示
-
 #### 按钮类型
 
 暂时支持`default`、`primary`两种类型，默认为`default`
@@ -55,7 +53,7 @@
 <i-button type="default" size="mini">迷你按钮</i-button>
 ```
 
-### Props
+#### Props
 
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|
@@ -65,7 +63,7 @@
 | loading | 是否显示为加载状态 | `Boolean` | `false` |
 | round | 是否为圆形按钮 | `Boolean` | `false` |
 
-### Events
+#### Events
 
 | 事件名 | 说明 | 参数 |
 |------|------|------|

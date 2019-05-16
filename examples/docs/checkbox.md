@@ -1,7 +1,5 @@
 ## Checkbox 复选框
 
-### 代码演示
-
 ```javascript
 export default {
   // 示例数据
@@ -86,7 +84,7 @@ export default {
 </i-cell-group>
 ```
 
-### CheckboxGroup Props
+#### CheckboxGroup Props
 
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|
@@ -94,7 +92,7 @@ export default {
 | disabled | 是否禁用所有复选框 | `Boolean` | `false` |
 | max | 限制最大选中数量，`0`代表不限制 | `Number` | `0` |
 
-### Checkbox Props
+#### Checkbox Props
 
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|
@@ -105,25 +103,25 @@ export default {
 | disabled | 是否禁用该复选框 | `Boolean` | `false` |
 | color | 选中状态图标背景色 | `String` | 主题色 |
 
-### Checkbox Slots
+#### Checkbox Slots
 
 | 名称 | 说明 | slot-scope |
 |------|------|------|
 | icon | 自定义图标 | value: 状态值 |
 
-### Checkbox Methods
+#### Checkbox Methods
 
 | 方法名 | 参数 | 返回值 | 介绍 |
 |------|------|------|------|
 | toggle | - | - | 切换选中状态 |
 
-### CheckboxGroup Events
+#### CheckboxGroup Events
 
 | 事件名 | 说明 | 参数 |
 |------|------|------|
 | change | 选中项改变时触发 | 所有选中项`name`值集合 |
 
-### Checkbox Events
+#### Checkbox Events
 
 | 事件名 | 说明 | 参数 |
 |------|------|------|

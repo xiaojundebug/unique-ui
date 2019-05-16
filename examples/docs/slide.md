@@ -1,7 +1,5 @@
 ## Slide 轮播图
 
-### 代码演示
-
 ```scss
 // 示例样式
 .i-slide-item {
@@ -44,7 +42,7 @@
 </i-slide>
 ```
 
-### Slide Props
+#### Slide Props
 
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|
@@ -53,19 +51,19 @@
 | duration | 动画时长，单位毫秒 | `Number` | `500` |
 | initial-slide | 初始位置索引值 | `Number` | `0` |
 
-### Slide Slots
+#### Slide Slots
 
 | 名称 | 说明 | slot-scope |
 |------|------|------|
 | indicator | 自定义指示器 | active: 当前索引 |
 
-### Slide Methods
+#### Slide Methods
 
 | 方法名 | 参数 | 返回值 | 介绍 |
 |------|------|------|------|
 | slideTo | 索引 | - | 切换到指定位置 |
 
-### Slide Events
+#### Slide Events
 
 | 事件名 | 说明 | 参数 |
 |------|------|------|

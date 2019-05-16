@@ -23,6 +23,7 @@ import Radio from 'packages/radio'
 import Field from 'packages/field'
 import Popup from 'packages/Popup'
 import Toast from 'packages/toast'
+import Modal from 'packages/modal'
 
 const components = [
   Icon,
@@ -46,7 +47,9 @@ const components = [
   RadioGroup,
   Radio,
   Field,
-  Popup
+  Popup,
+  Toast,
+  Modal
 ]
 
 export {
@@ -72,7 +75,8 @@ export {
   Radio,
   Field,
   Popup,
-  Toast
+  Toast,
+  Modal
 }
 
 const install = function(Vue) {
@@ -80,6 +84,7 @@ const install = function(Vue) {
     Vue.component(component.name, component)
   })
   Vue.use(Toast)
+  Vue.use(Modal)
 }
 
 if (typeof window !== 'undefined' && window.Vue) {

@@ -132,6 +132,12 @@ export default [
         routePath: '/loading',
         doc: () => import('docs/loading'),
         demo: () => import('packages/loading/demo')
+      },
+      {
+        name: 'Modal 弹窗',
+        routePath: '/modal',
+        doc: () => import('docs/modal'),
+        demo: () => import('packages/modal/demo')
       }
     ]
   }
