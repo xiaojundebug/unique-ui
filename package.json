@@ -1,7 +1,7 @@
 {
   "name": "unique-ui",
   "version": "0.2.2",
-  "main": "src/index.js",
+  "main": "lib/unique.min.js",
   "license": "MIT",
   "repository": "git@github.com:xiaojun1994/unique-ui.git",
   "author": "xiaojun1994 <362896731@qq.com>",
