@@ -3,7 +3,7 @@
     <demo-block title="js调用">
       <div class="wrapper">
         <i-button @click="$modal.alert('Are you ok?', { title: '👽' })">alert</i-button>
-        <i-button @click="$modal.confirm('大郎，起来喝药了', { title: '提示' })">confimr</i-button>
+        <i-button @click="$modal.confirm('大郎，起来喝药了', { title: '提示' })">confirm</i-button>
       </div>
     </demo-block>
     <demo-block title="异步关闭">

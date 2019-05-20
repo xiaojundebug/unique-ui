@@ -8,9 +8,7 @@
       :style="innerStyle">
       <div class="i-notice-bar__left">
         <slot name="left">
-          <i-icon
-            name="volume-up"
-            size="19px"></i-icon>
+          <i :class="leftIconClassName"></i>
         </slot>
       </div>
 
@@ -82,13 +80,13 @@ export default {
       }
     },
     leftIconClassName() {
-      return ['i-notice-bar__left-icon', 'fa fa-fw fa-volume-up']
+      return ['i-notice-bar__left-icon', 'iconfont', 'icon-volume']
     },
     rightIconClassName() {
       if (!this.mode) return
       return [
         'i-notice-bar__right-icon',
-        'icon',
+        'iconfont',
         this.mode === 'closeable' ? 'icon-close-circle' : 'icon-arrow-right'
       ]
     },

@@ -47,6 +47,8 @@ Component.install = function(Vue) {
   Vue.prototype.$toast.fail = (msg, opts = {}) => handler(msg, { ...opts, type: 'fail' })
 
   Vue.prototype.$toast.close = clear
+
+  Vue.component(Component.name, Component)
 }
 
 export default Component

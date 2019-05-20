@@ -17,10 +17,10 @@
           color="#fff"></i-loading>
         <i
           v-else-if="type == 'success'"
-          class="icon icon-success"></i>
+          class="iconfont icon-success"></i>
         <i
           v-else-if="type == 'fail'"
-          class="icon icon-fail"></i>
+          class="iconfont icon-fail"></i>
       </slot>
     </div>
     <div

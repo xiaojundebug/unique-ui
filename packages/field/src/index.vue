@@ -32,7 +32,7 @@
       >
       <i
         v-if="showClear"
-        class="i-field__clear icon icon-close-circle"
+        class="i-field__clear iconfont icon-close-circle"
         @touchstart.prevent="onClear"></i>
     </template>
     <div

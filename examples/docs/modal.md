@@ -62,13 +62,13 @@ this.$modal.alert('异步关闭', { title: '提示', autoClose: false }).then(cl
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|
 | show | 是否显示，`v-model`是`v-bind:show`与`v-on:toggle`的简写方式 | `Boolean` | `false` |
-| type | 同Options中一致 | `String` | `normal` |
-| title | 同Options中一致 | `String` | `''` |
+| type | 同 Options 中一致 | `String` | `normal` |
+| title | 同 Options 中一致 | `String` | `''` |
 | text | 文字内容 | `String` | `''` |
 | overlay | 是否显示蒙版 | `Boolean` | `true` |
-| confirmText | 同Options中一致 | `String` | `确认` |
-| cancelText | 同Options中一致 | `String` | `取消` |
-| closeOnClickOverlay | 同Options中一致	 | `Boolean` | `false` |
+| confirmText | 同 Options 中一致 | `String` | `确认` |
+| cancelText | 同 Options 中一致 | `String` | `取消` |
+| closeOnClickOverlay | 同 Options 中一致	 | `Boolean` | `false` |
 | transitionName | 同`Popup组件`中一致	 | `String` | `''` |
 
 

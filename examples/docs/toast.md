@@ -34,9 +34,9 @@ this.$toast.fail('失败')
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|
 | show | 是否显示 | `Boolean` | `false` |
-| type | 同Options中一致 | `String` | `normal` |
+| type | 同 Options 中一致 | `String` | `normal` |
 | text | 文字内容 | `String` | `''` |
-| overlay | 是否显示一个透明度为`0`的蒙版，不同于Options中，这里所有`type`下都会生效 | `Boolean` | `true` |
+| overlay | 是否显示一个透明度为`0`的蒙版，不同于 Options 中，这里所有`type`下都会生效 | `Boolean` | `true` |
 
 
 #### Slots
