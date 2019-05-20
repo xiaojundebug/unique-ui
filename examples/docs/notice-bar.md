@@ -2,7 +2,6 @@
 
 ```javascript
 export default {
-  // 示例数据
   data() {
     return {
       msg1: '您订阅的双11抽奖活动已开始，共3次抽奖机会，仅限今日。',

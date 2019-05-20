@@ -79,3 +79,5 @@ export default {
   }
 }
 </script>
+
+<style src="../../theme/cell.scss"/>

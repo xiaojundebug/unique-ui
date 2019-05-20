@@ -2,7 +2,6 @@
 
 ```javascript
 export default {
-  // 示例数据
   data() {
     return {
       value1: true,

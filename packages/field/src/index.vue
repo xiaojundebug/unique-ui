@@ -120,3 +120,5 @@ export default {
   }
 }
 </script>
+
+<style src="../../theme/field.scss"/>

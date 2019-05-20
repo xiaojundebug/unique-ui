@@ -5,8 +5,8 @@
     @click="cb">
     <i
       class="fa fa-refresh fa-spin"
-      v-if="loading" />
-    <slot />
+      v-if="loading"/>
+    <slot/>
   </button>
 </template>
 
@@ -49,3 +49,6 @@ export default {
   }
 }
 </script>
+
+<style src="../../theme/button.scss"/>
+

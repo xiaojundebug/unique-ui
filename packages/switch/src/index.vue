@@ -50,3 +50,5 @@ export default {
   }
 }
 </script>
+
+<style src="../../theme/switch.scss"/>

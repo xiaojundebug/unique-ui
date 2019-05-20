@@ -37,3 +37,5 @@ export default {
   methods: {}
 }
 </script>
+
+<style src="../../theme/loading.scss"/>

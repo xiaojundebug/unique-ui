@@ -96,3 +96,5 @@ export default {
   }
 }
 </script>
+
+<style src="../../theme/modal.scss"/>

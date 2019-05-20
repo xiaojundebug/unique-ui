@@ -46,3 +46,5 @@ export default {
   }
 }
 </script>
+
+<style src="../theme/overlay.scss"/>

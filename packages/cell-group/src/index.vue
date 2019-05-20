@@ -9,3 +9,5 @@ export default {
   name: 'ICellGroup'
 }
 </script>
+
+<style src="../../theme/cell-group.scss"/>

@@ -92,3 +92,5 @@ export default {
   }
 }
 </script>
+
+<style src="../../theme/checkbox.scss"/>

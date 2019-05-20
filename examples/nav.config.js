@@ -10,6 +10,20 @@ export default [
         demo: () => import('./pages/demo-home')
       },
       {
+        name: '快速上手',
+        routePath: '/use',
+        hideNavBar: true,
+        doc: () => import('docs/use'),
+        demo: () => import('./pages/demo-home')
+      },
+      {
+        name: '更换主题',
+        routePath: '/theme',
+        hideNavBar: true,
+        doc: () => import('docs/theme'),
+        demo: () => import('./pages/demo-home')
+      },
+      {
         name: '实用代码',
         routePath: '/utils',
         hideNavBar: true,
