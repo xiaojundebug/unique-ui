@@ -3,6 +3,8 @@
   "version": "0.2.2",
   "main": "src/index.js",
   "license": "MIT",
+  "repository": "git@github.com:xiaojun1994/unique-ui.git",
+  "author": "xiaojun1994 <362896731@qq.com>",
   "scripts": {
     "dev": "webpack-dev-server --hot --inline --progress --config build/webpack.dev.conf.js",
     "build:lib": "webpack --color --progress --config build/webpack.prod.conf.js",
@@ -11,6 +13,11 @@
     "lint": "eslint --ext .js,.vue src packages",
     "lint:fix": "eslint --fix --ext .js,.vue src packages"
   },
+  "files": [
+    "lib",
+    "packages",
+    "src"
+  ],
   "dependencies": {
     "font-awesome": "^4.7.0",
     "normalize.css": "^8.0.1"
