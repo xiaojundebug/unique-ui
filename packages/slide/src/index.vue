@@ -16,7 +16,8 @@
       <ul class="i-slide__indicators">
         <li
           v-for="index in count"
-          :class="{ 'i-slide__indicator': true, active: index - 1 === activeIndicator }"></li>
+          :class="{ 'i-slide__indicator': true, active: index - 1 === activeIndicator }"
+          :key="index"></li>
       </ul>
     </slot>
   </div>
@@ -190,3 +191,5 @@ export default {
   }
 }
 </script>
+
+<style src="../../theme/slide.scss"/>

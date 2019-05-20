@@ -41,6 +41,22 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader'
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'fast-css-loader', 'postcss-loader']
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'fast-css-loader', 'postcss-loader', 'fast-sass-loader']
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url-loader'
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        loader: 'url-loader'
       }
     ]
   },

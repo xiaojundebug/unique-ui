@@ -35,3 +35,5 @@ export default {
   methods: {}
 }
 </script>
+
+<style src="../../theme/slide-item.scss"/>

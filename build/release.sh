@@ -15,5 +15,5 @@ then
   git rebase master
   git push --follow-tags origin dev
 
-  yarn build:doc
+  npm run build:doc
 fi

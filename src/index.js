@@ -1,5 +1,6 @@
 import 'normalize.css'
 import 'font-awesome/css/font-awesome.min.css'
+import 'packages/theme/base.scss'
 import Icon from 'packages/icon'
 import Button from 'packages/button'
 import NavBar from 'packages/nav-bar'

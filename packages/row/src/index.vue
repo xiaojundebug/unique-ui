@@ -26,3 +26,5 @@ export default {
   methods: {}
 }
 </script>
+
+<style src="../../theme/row.scss"/>

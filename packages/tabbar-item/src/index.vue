@@ -62,3 +62,5 @@ export default {
   }
 }
 </script>
+
+<style src="../../theme/tabbar-item.scss"/>
