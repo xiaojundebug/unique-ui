@@ -1,3 +1,5 @@
+npm run build:lib
+
 git checkout master
 git merge dev
 
