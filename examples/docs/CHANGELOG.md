@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.5](https://github.com/xiaojun1994/unique-ui/compare/v0.2.4...v0.2.5) (2019-05-21)
+
+
+### Bug Fixes
+
+* 修复npm发布bug，不影响代码 ([759dfab](https://github.com/xiaojun1994/unique-ui/commit/759dfab))
+
+
+
 ## [0.2.4](https://github.com/xiaojun1994/unique-ui/compare/v0.2.3...v0.2.4) (2019-05-21)
 
 
