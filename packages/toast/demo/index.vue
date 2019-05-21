@@ -7,7 +7,7 @@
     </demo-block>
     <demo-block title="不同类型">
       <div class="wrapper">
-        <i-button @click="$toast.loading('Loading...', { duration: 0 })">loading</i-button>
+        <i-button @click="$toast.loading('Loading...', { duration: 3000 })">loading</i-button>
         <i-button @click="$toast.success('成功')">success</i-button>
         <i-button @click="$toast.fail('失败')">fail</i-button>
       </div>

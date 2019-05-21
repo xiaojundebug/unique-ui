@@ -17,9 +17,7 @@
     "lint:fix": "eslint --fix --ext .js,.vue src packages"
   },
   "files": [
-    "lib",
-    "packages",
-    "src"
+    "lib"
   ],
   "dependencies": {
     "font-awesome": "^4.7.0",

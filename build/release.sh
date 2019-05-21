@@ -16,4 +16,5 @@ then
   git push --follow-tags origin dev
 
   npm run build:doc
+  npm run build:lib && npm publish --registry http://registry.npmjs.org
 fi
