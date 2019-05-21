@@ -1,6 +1,3 @@
-import 'normalize.css'
-import 'font-awesome/css/font-awesome.min.css'
-import 'packages/theme/base.scss'
 import Icon from 'packages/icon'
 import Button from 'packages/button'
 import NavBar from 'packages/nav-bar'
@@ -22,7 +19,7 @@ import NoticeBar from 'packages/notice-bar'
 import RadioGroup from 'packages/radio-group'
 import Radio from 'packages/radio'
 import Field from 'packages/field'
-import Popup from 'packages/Popup'
+import Popup from 'packages/popup'
 import Toast from 'packages/toast'
 import Modal from 'packages/modal'
 
@@ -80,9 +77,13 @@ export {
   Modal
 }
 
+const uninstallComponents = ['Toast', 'Modal']
+
 const install = function(Vue) {
   components.forEach(component => {
-    Vue.component(component.name, component)
+    if (!uninstallComponents.includes(component)) {
+      Vue.component(component.name, component)
+    }
   })
   Vue.use(Toast)
   Vue.use(Modal)

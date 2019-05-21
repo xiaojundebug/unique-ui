@@ -1,13 +1,16 @@
-// @import './fonts/style.css';
-@import './common/var';
-@import './common/1px';
+@import './common/normalize';
 @import './common/ellipsis';
 @import './common/transition';
+@import './common/var';
+@import './common/1px';
 
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC',
     'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+  margin: 0;
+  font-size: 14px;
   color: $color-dark;
+  -webkit-tap-highlight-color: transparent;
 }
 button,
 input,

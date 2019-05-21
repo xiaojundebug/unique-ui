@@ -14,8 +14,12 @@
 </template>
 
 <script>
+import ILoading from '../../loading'
+import '../../theme/loading.scss'
+
 export default {
   name: 'ISwitch',
+  components: { ILoading },
   model: {
     prop: 'value',
     event: 'change'
@@ -51,4 +55,3 @@ export default {
 }
 </script>
 
-<style src="../../theme/switch.scss"/>

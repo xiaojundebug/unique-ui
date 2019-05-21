@@ -35,4 +35,3 @@ export default {
 }
 </script>
 
-<style src="../../theme/col.scss"/>

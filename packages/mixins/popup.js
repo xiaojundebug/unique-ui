@@ -1,4 +1,4 @@
-import Overlay from 'packages/overlay'
+import Overlay from '../overlay'
 
 export default {
   props: {

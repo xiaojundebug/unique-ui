@@ -58,8 +58,6 @@ Component.install = function(Vue) {
   Vue.prototype.$modal = (msg, opts = {}) => handler(msg, { type: 'alert', ...opts })
   Vue.prototype.$modal.alert = (msg, opts = {}) => handler(msg, { ...opts, type: 'alert' })
   Vue.prototype.$modal.confirm = (msg, opts = {}) => handler(msg, { ...opts, type: 'confirm' })
-
-  Vue.component(Component.name, Component)
 }
 
 export default Component

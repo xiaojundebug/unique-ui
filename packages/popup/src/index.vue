@@ -46,4 +46,3 @@ export default {
 }
 </script>
 
-<style src="../../theme/popup.scss"/>

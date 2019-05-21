@@ -65,4 +65,3 @@ export default {
 }
 </script>
 
-<style src="../../theme/radio.scss"/>

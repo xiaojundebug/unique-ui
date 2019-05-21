@@ -33,4 +33,3 @@ export default {
 }
 </script>
 
-<style src="../../theme/icon.scss"/>

@@ -41,8 +41,12 @@
 </template>
 
 <script>
+import IPopup from '../../popup'
+import '../../theme/popup.scss'
+
 export default {
   name: 'IModal',
+  components: { IPopup },
   model: {
     prop: 'show',
     event: 'toggle'
@@ -96,5 +100,3 @@ export default {
   }
 }
 </script>
-
-<style src="../../theme/modal.scss"/>

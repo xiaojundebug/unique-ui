@@ -27,4 +27,3 @@ export default {
 }
 </script>
 
-<style src="../../theme/row.scss"/>

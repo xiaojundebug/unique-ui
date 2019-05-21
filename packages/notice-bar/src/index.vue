@@ -140,4 +140,3 @@ export default {
 }
 </script>
 
-<style src="../../theme/notice-bar.scss"/>

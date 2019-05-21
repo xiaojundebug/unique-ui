@@ -38,4 +38,3 @@ export default {
 }
 </script>
 
-<style src="../../theme/loading.scss"/>

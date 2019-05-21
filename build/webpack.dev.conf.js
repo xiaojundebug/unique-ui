@@ -28,7 +28,6 @@ module.exports = {
       packages: path.resolve(__dirname, '../packages')
     }
   },
-  // externals: [/^normalize\.css$/, /^font-awesome/],
   // webpack-dev-server
   devServer: {
     contentBase: path.resolve(__dirname, '../examples/dist'),
@@ -57,11 +56,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'fast-css-loader', 'postcss-loader']
+        use: ['style-loader', 'css-loader', 'postcss-loader']
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'fast-css-loader', 'postcss-loader', 'fast-sass-loader']
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
       },
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,

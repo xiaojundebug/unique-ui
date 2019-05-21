@@ -8,7 +8,6 @@ All notable changes to this project will be documented in this file. See [standa
 ### Bug Fixes
 
 * 修复引入报错bug ([947f76e](https://github.com/xiaojun1994/unique-ui/commit/947f76e))
-* 修复引入报错问题 ([f082f1e](https://github.com/xiaojun1994/unique-ui/commit/f082f1e))
 
 
 
@@ -18,10 +17,6 @@ All notable changes to this project will be documented in this file. See [standa
 ### Bug Fixes
 
 * 修复某些组件中icon不显示问题 ([69b7373](https://github.com/xiaojun1994/unique-ui/commit/69b7373))
-
-
-
-## [0.2.1](https://github.com/xiaojun1994/unique-ui/compare/v0.2.0...v0.2.1) (2019-05-20)
 
 
 

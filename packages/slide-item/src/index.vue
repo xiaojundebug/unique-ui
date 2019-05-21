@@ -36,4 +36,3 @@ export default {
 }
 </script>
 
-<style src="../../theme/slide-item.scss"/>

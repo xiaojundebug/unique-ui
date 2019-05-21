@@ -50,5 +50,3 @@ export default {
 }
 </script>
 
-<style src="../../theme/button.scss"/>
-

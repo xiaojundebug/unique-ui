@@ -55,4 +55,3 @@ export default {
 }
 </script>
 
-<style src="../../theme/nav-bar.scss"/>

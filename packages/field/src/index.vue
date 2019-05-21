@@ -33,7 +33,8 @@
       <i
         v-if="showClear"
         class="i-field__clear iconfont icon-close-circle"
-        @touchstart.prevent="onClear"></i>
+        @touchstart.prevent="onClear"
+      ></i>
     </template>
     <div
       v-if="$slots['right-icon']"
@@ -44,8 +45,12 @@
 </template>
 
 <script>
+import ICell from '../../cell'
+import '../../theme/cell.scss'
+
 export default {
   name: 'IField',
+  components: { ICell },
   inheritAttrs: false,
   props: {
     type: {
@@ -121,4 +126,3 @@ export default {
 }
 </script>
 
-<style src="../../theme/field.scss"/>

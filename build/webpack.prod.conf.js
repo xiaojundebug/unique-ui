@@ -1,19 +1,16 @@
 const path = require('path')
 const { VueLoaderPlugin } = require('vue-loader')
+const Components = require('./get-components')()
 
 module.exports = {
   mode: 'production',
-  entry: {
-    unique: './src/index.js'
-  },
+  entry: Components,
   output: {
     path: path.resolve(__dirname, '../lib'),
     publicPath: './',
-    filename: '[name].min.js',
-    library: 'unique',
-    libraryTarget: 'umd',
-    umdNamedDefine: true,
-    globalObject: 'this'
+    filename: '[name].js',
+    chunkFilename: '[id].js',
+    libraryTarget: 'commonjs2'
   },
   resolve: {
     extensions: ['.js', '.vue'],
@@ -21,7 +18,7 @@ module.exports = {
       packages: path.resolve(__dirname, '../packages')
     }
   },
-  externals: [/^normalize\.css$/, /^font-awesome/],
+  externals: [/^vue$/],
   performance: false,
   optimization: {
     minimize: true
@@ -44,11 +41,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'fast-css-loader', 'postcss-loader']
+        use: ['style-loader', 'css-loader', 'postcss-loader']
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'fast-css-loader', 'postcss-loader', 'fast-sass-loader']
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
       },
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
@@ -60,5 +57,7 @@ module.exports = {
       }
     ]
   },
-  plugins: [new VueLoaderPlugin()]
+  plugins: [
+    new VueLoaderPlugin()
+  ]
 }

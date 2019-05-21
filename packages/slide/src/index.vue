@@ -192,4 +192,3 @@ export default {
 }
 </script>
 
-<style src="../../theme/slide.scss"/>

@@ -10,4 +10,3 @@ export default {
 }
 </script>
 
-<style src="../../theme/cell-group.scss"/>

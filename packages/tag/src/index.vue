@@ -37,4 +37,3 @@ export default {
 }
 </script>
 
-<style src="../../theme/tag.scss"/>

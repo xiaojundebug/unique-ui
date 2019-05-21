@@ -32,13 +32,16 @@
 </template>
 
 <script>
+import IPopup from '../../popup'
+import '../../theme/popup.scss'
+
 export default {
   name: 'IToast',
+  components: { IPopup },
   model: {
     prop: 'show',
     event: 'toggle'
   },
-  components: {},
   props: {
     show: {
       type: Boolean,
@@ -75,4 +78,3 @@ export default {
 }
 </script>
 
-<style src="../../theme/toast.scss"/>
