@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { popup } from 'packages/mixins'
+import { popup } from 'unique-ui/packages/mixins'
 
 export default {
   name: 'IPopup',

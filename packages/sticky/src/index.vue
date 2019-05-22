@@ -13,8 +13,7 @@
 </template>
 
 <script>
-import { featureTest } from 'packages/utils'
-import { on, off } from 'packages/utils/event'
+import { featureTest, event } from 'unique-ui/packages/utils'
 const nativeSupported = featureTest('position', 'sticky')
 
 export default {
@@ -74,12 +73,12 @@ export default {
   },
   mounted() {
     if (nativeSupported) return
-    on(window, 'scroll', this.scrollHandler, true)
+    event.on(window, 'scroll', this.scrollHandler, true)
   },
   destroyed() {
     if (nativeSupported) return
     cancelAnimationFrame(this.rafTimer)
-    off(window, 'scroll', this.scrollHandler)
+    event.off(window, 'scroll', this.scrollHandler)
   },
   methods: {}
 }

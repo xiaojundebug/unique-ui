@@ -32,8 +32,7 @@
 </template>
 
 <script>
-import IPopup from '../../popup'
-import '../../theme/popup.scss'
+import IPopup from 'unique-ui/packages/popup'
 
 export default {
   name: 'IToast',

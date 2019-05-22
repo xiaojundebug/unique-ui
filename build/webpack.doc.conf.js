@@ -2,6 +2,8 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
+const ProgressBarPlugin = require('progress-bar-webpack-plugin')
+const config = require('./config')
 const hljs = require('highlight.js')
 
 module.exports = {
@@ -12,19 +14,11 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, '../examples/dist'),
-    publicPath: './',
-    chunkFilename: 'chunk_[name].[chunkhash:8].js',
-    libraryTarget: 'umd'
+    publicPath: './'
   },
   resolve: {
-    extensions: ['.js', '.vue', '.md'],
-    alias: {
-      vue$: 'vue/dist/vue.esm.js',
-      src: path.resolve(__dirname, '../src'),
-      examples: path.resolve(__dirname, '../examples'),
-      docs: path.resolve(__dirname, '../examples/docs'),
-      packages: path.resolve(__dirname, '../packages')
-    }
+    extensions: config.extensions,
+    alias: config.alias
   },
   optimization: {
     splitChunks: {
@@ -52,7 +46,12 @@ module.exports = {
       },
       {
         test: /\.vue$/,
-        loader: 'vue-loader'
+        loader: 'vue-loader',
+        options: {
+          compilerOptions: {
+            preserveWhitespace: false
+          }
+        }
       },
       {
         test: /\.css$/,
@@ -112,6 +111,7 @@ module.exports = {
     new CleanWebpackPlugin(['./examples/dist'], {
       root: path.resolve(__dirname, '../')
     }),
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new ProgressBarPlugin()
   ]
 }

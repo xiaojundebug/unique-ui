@@ -1,7 +1,7 @@
-const fs = require('fs')
+const fs = require('fs-extra')
 const path = require('path')
 
-const excludes = ['mixins', 'utils', 'theme']
+const excludes = ['theme']
 
 module.exports = function() {
   let dirs = fs.readdirSync(path.resolve(__dirname, '../packages'))

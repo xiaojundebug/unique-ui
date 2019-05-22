@@ -45,8 +45,7 @@
 </template>
 
 <script>
-import ICell from '../../cell'
-import '../../theme/cell.scss'
+import ICell from 'unique-ui/packages/cell'
 
 export default {
   name: 'IField',

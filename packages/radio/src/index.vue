@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { findParent } from 'packages/mixins'
+import { findParent } from 'unique-ui/packages/mixins'
 
 export default {
   name: 'IRadio',

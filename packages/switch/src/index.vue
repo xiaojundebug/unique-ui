@@ -14,8 +14,7 @@
 </template>
 
 <script>
-import ILoading from '../../loading'
-import '../../theme/loading.scss'
+import ILoading from 'unique-ui/packages/loading'
 
 export default {
   name: 'ISwitch',

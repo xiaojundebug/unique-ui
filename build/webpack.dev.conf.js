@@ -2,6 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
+const config = require('./config')
 const hljs = require('highlight.js')
 
 module.exports = {
@@ -13,20 +14,12 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, '../examples/dist'),
-    publicPath: '/',
-    chunkFilename: 'chunk_[name].js',
-    libraryTarget: 'umd'
+    publicPath: '/'
   },
   devtool: 'cheap-module-eval-source-map',
   resolve: {
-    extensions: ['.js', '.vue', '.md'], // 引入模块时可以省略的扩展名
-    alias: {
-      vue$: 'vue/dist/vue.esm.js',
-      src: path.resolve(__dirname, '../src'),
-      examples: path.resolve(__dirname, '../examples'),
-      docs: path.resolve(__dirname, '../examples/docs'),
-      packages: path.resolve(__dirname, '../packages')
-    }
+    extensions: config.extensions, // 引入模块时可以省略的扩展名
+    alias: config.alias
   },
   // webpack-dev-server
   devServer: {
