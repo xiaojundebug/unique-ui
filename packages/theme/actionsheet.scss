@@ -1,0 +1,37 @@
+@import './common/var';
+@import './popup.scss';
+
+.i-actionsheet {
+  background-color: #f8f8f8;
+  &__header,
+  &__body,
+  &__footer {
+    background-color: #fff;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 50px;
+  }
+  &__action {
+    &--disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+  &__footer {
+    margin-top: 10px;
+  }
+  &__action,
+  &__footer {
+    height: $action-height;
+    line-height: $action-height;
+    text-align: center;
+    font-size: 16px;
+    &:active:not(.i-actionsheet__action--disabled) {
+      background-color: $border-color;
+    }
+  }
+}

@@ -14,22 +14,22 @@
         <i-button @click="show6 = true">show</i-button>
       </div>
     </demo-block>
-    <i-popup :show="show1" @clickOverlay="show1 = false" position="center">
+    <i-popup :show="show1" @click-overlay="show1 = false" position="center">
       <div class="popup-demo-content" style="height:200px">中</div>
     </i-popup>
-    <i-popup :show="show2" @clickOverlay="show2 = false" position="top">
+    <i-popup :show="show2" @click-overlay="show2 = false" position="top">
       <div class="popup-demo-content" style="height:100px">上</div>
     </i-popup>
-    <i-popup :show="show3" @clickOverlay="show3 = false" position="right">
-      <div class="popup-demo-content" style="width:50vw">右</div>
+    <i-popup :show="show3" @click-overlay="show3 = false" position="right">
+      <div class="popup-demo-content" style="width:70vw">右</div>
     </i-popup>
-    <i-popup :show="show4" @clickOverlay="show4 = false" position="bottom">
+    <i-popup :show="show4" @click-overlay="show4 = false" position="bottom">
       <div class="popup-demo-content" style="height:50vh">下</div>
     </i-popup>
-    <i-popup :show="show5" @clickOverlay="show5 = false" position="left">
-      <div class="popup-demo-content" style="width:50vw">左</div>
+    <i-popup :show="show5" @click-overlay="show5 = false" position="left">
+      <div class="popup-demo-content" style="width:70vw">左</div>
     </i-popup>
-    <i-popup :show="show6" @clickOverlay="show6 = false" position="center" transition-name="zoomInUp" :overlayOpacity="0.85" overlayColor="#fff">
+    <i-popup :show="show6" @click-overlay="show6 = false" position="center" transition-name="fade" :overlay-opacity="0.85" overlay-color="#fff">
       <div class="popup-demo-content" style="height:200px"></div>
     </i-popup>
   </div>
@@ -65,15 +65,14 @@ export default {
     background-color: #d6e09e;
     color: #fff;
   }
-  .zoomInUp-enter-active,
-  .zoomInUp-leave-active {
+  .fade-enter-active,
+  .fade-leave-active {
     transition: opacity 0.3s, transform 0.3s;
   }
-  .zoomInUp-enter,
-  .zoomInUp-leave-to {
+  .fade-enter,
+  .fade-leave-to {
     opacity: 0;
-    transform: translate3d(-50%, 100%, 0) scale(0);
+    transform: translate3d(-50%, -50%, 0);
   }
-
 }
 </style>

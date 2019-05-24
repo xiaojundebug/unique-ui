@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import 'highlight.js/styles/solarized-dark.css'
 import DocHeader from './components/doc-header'
 import DocMain from './components/doc-main'
 import DocNav from './components/doc-nav'

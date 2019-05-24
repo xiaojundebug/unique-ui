@@ -17,13 +17,12 @@
     </demo-block>
     <demo-block title="禁用">
       <div class="wrapper">
-        <i-checkbox v-model="value4" disabled>a</i-checkbox>
-        <i-checkbox v-model="value5" disabled>b</i-checkbox>
+        <i-checkbox v-model="value4" disabled>disabled</i-checkbox>
       </div>
     </demo-block>
     <demo-block title="自定义图标">
       <div class="wrapper">
-        <i-checkbox v-model="value6">
+        <i-checkbox v-model="value5">
           <template slot="icon" slot-scope="props">
             <i-icon :name="props.value ? 'heart' : 'heart-o'" size="24px" color="#ab97c3" />
             <span>{{ props.value }}</span>
@@ -33,7 +32,7 @@
     </demo-block>
     <demo-block title="Checkbox 组">
       <div class="wrapper">
-        <i-checkbox-group v-model="value7" :max="3">
+        <i-checkbox-group v-model="value6" :max="3">
           <i-checkbox name="a">a</i-checkbox>
           <i-checkbox name="b">b</i-checkbox>
           <i-checkbox name="c">c</i-checkbox>
@@ -45,10 +44,10 @@
     <demo-block title="搭配 Cell 使用">
       <i-cell-group>
         <i-cell title="A" is-link @click="_=>$refs.a.toggle()">
-          <i-checkbox slot="right-icon" v-model="value8" ref="a" />
+          <i-checkbox slot="right-icon" v-model="value7" ref="a" />
         </i-cell>
         <i-cell title="B" is-link @click="_=>$refs.b.toggle()">
-          <i-checkbox slot="right-icon" v-model="value9" ref="b" />
+          <i-checkbox slot="right-icon" v-model="value8" ref="b" />
         </i-cell>
       </i-cell-group>
     </demo-block>
@@ -63,11 +62,10 @@ export default {
       value2: true,
       value3: 0,
       value4: false,
-      value5: true,
-      value6: false,
-      value7: ['b', 'c'],
-      value8: false,
-      value9: true
+      value5: false,
+      value6: ['b', 'c'],
+      value7: false,
+      value8: true
     }
   }
 }

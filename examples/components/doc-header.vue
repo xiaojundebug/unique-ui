@@ -2,7 +2,9 @@
   <header class="doc-header">
     <div class="doc-header__inner">
       <router-link to="/">
-        <img class="logo" src="../assets/images/logo1.png" alt="logo">
+        <doc-logo></doc-logo>
+        
+        <span class="version">v{{ require('../../package.json').version }}</span>
       </router-link>
       <a href="https://github.com/xiaojun1994/unique-ui" target="_blank" class="github">
         <svg height="28" width="28" viewBox="0 0 16 16" version="1.1" aria-hidden="true" class="octicon octicon-mark-github">
@@ -14,7 +16,10 @@
 </template>
 
 <script>
-export default {}
+import DocLogo from './doc-logo'
+export default {
+  components: { DocLogo }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -23,6 +28,7 @@ export default {}
   flex: 0 0 70px;
   border-bottom: 1px solid #f1f4f8;
   .doc-header__inner {
+    position: relative;
     width: 1500px;
     height: 100%;
     display: flex;
@@ -30,8 +36,13 @@ export default {}
     justify-content: space-between;
     margin: 0 auto;
     padding: 0 20px;
-    .logo {
-      height: 65px;
+    .version {
+      position: absolute;
+      left: 145px;
+      bottom: 24px;
+      font-family: Arial;
+      color: #999;
+      font-size: 14px;
     }
   }
 }

@@ -1,52 +1,33 @@
 ## Checkbox 复选框
 
-```javascript
-export default {
-  data() {
-    return {
-      value1: true,
-      value2: true,
-      value3: 0,
-      value4: false,
-      value5: true,
-      value6: false,
-      value7: ['b', 'c'],
-      value8: false,
-      value9: true
-    }
-  }
-}
-```
-
 #### 简单用法
 
 ```html
-<i-checkbox v-model="value1">{{ value1 }}</i-checkbox>
+<i-checkbox v-model="value">{{ value }}</i-checkbox>
 ```
 
 #### 自定义颜色
 
 ```html
-<i-checkbox v-model="value2" color="#49b683">{{ value2 }}</i-checkbox>
+<i-checkbox v-model="value" color="#49b683">{{ value }}</i-checkbox>
 ```
 
 #### 自定义状态值
 
 ```html
-<i-checkbox v-model="value3" :true-value="1" :false-value="0">value: {{ value3 }}</i-checkbox>
+<i-checkbox v-model="value" :true-value="1" :false-value="0">value: {{ value }}</i-checkbox>
 ```
 
 #### 禁用
 
 ```html
-<i-checkbox v-model="value4" disabled>a</i-checkbox>
-<i-checkbox v-model="value5" disabled>b</i-checkbox>
+<i-checkbox v-model="value" disabled>disabled</i-checkbox>
 ```
 
 #### 自定义图标
 
 ```html
-<i-checkbox v-model="value6">
+<i-checkbox v-model="value">
   <template slot="icon" slot-scope="props">
     <i-icon :name="props.value ? 'heart' : 'heart-o'" size="24px" color="#ab97c3" />
     <span>{{ props.value }}</span>
@@ -59,13 +40,12 @@ export default {
 需要与`CheckboxGroup`搭配使用，选中值是一个数组，数组中的项是`Checkbox`上`name`属性设置的值，可以通过设置`max`属性来限制最大选中数量
 
 ```html
-<i-checkbox-group v-model="value7" :max="3">
+<i-checkbox-group v-model="value" :max="3">
   <i-checkbox name="a">a</i-checkbox>
   <i-checkbox name="b">b</i-checkbox>
   <i-checkbox name="c">c</i-checkbox>
   <i-checkbox name="d">d</i-checkbox>
 </i-checkbox-group>
-<p>当前选择：{{ value7 }}</p>
 ```
 
 #### 搭配 Cell 使用
@@ -75,10 +55,10 @@ export default {
 ```html
 <i-cell-group>
   <i-cell title="A" is-link @click="_=>$refs.a.toggle()">
-    <i-checkbox slot="right-icon" v-model="value8" ref="a" />
+    <i-checkbox slot="right-icon" v-model="value" ref="a" />
   </i-cell>
   <i-cell title="B" is-link @click="_=>$refs.b.toggle()">
-    <i-checkbox slot="right-icon" v-model="value9" ref="b" />
+    <i-checkbox slot="right-icon" v-model="value" ref="b" />
   </i-cell>
 </i-cell-group>
 ```

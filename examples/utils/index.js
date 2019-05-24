@@ -19,5 +19,6 @@ function iframeReady(iframe, callback) {
 
 const ua = navigator.userAgent.toLowerCase()
 const isMobile = /ios|iphone|ipod|ipad|android/.test(ua)
+const randNum = (a = 0, b) => a + Math.round(Math.random() * (b - a))
 
-export { isMobile, iframeReady }
+export { isMobile, iframeReady, randNum }

@@ -3,7 +3,7 @@
 #### 简单用法
 
 ```html
-<i-tabbar v-model="active1" :fixed="false">
+<i-tabbar v-model="active" :fixed="false">
   <i-tabbar-item icon="shopping-cart" label="购物车" value="/shopping-cart" dot></i-tabbar-item>
   <i-tabbar-item icon="star" label="收藏" value="/star"></i-tabbar-item>
   <i-tabbar-item icon="share-alt" label="分享" value="/share"></i-tabbar-item>
@@ -14,7 +14,7 @@
 export default {
   data() {
     return {
-      active1: '/shopping-cart'
+      active: '/shopping-cart'
     }
   }
 }
@@ -23,7 +23,7 @@ export default {
 #### 自定义颜色
 
 ```html
-<i-tabbar v-model="active2" :fixed="false" color="#666" active-color="#ff7e4a">
+<i-tabbar v-model="active" :fixed="false" color="#666" active-color="#ff7e4a">
   <i-tabbar-item icon="shopping-cart" label="购物车" value="/shopping-cart"></i-tabbar-item>
   <i-tabbar-item icon="star" label="收藏" value="/star"></i-tabbar-item>
   <i-tabbar-item icon="share-alt" label="分享" value="/share"></i-tabbar-item>
@@ -34,7 +34,7 @@ export default {
 export default {
   data() {
     return {
-      active2: '/star'
+      active: '/star'
     }
   }
 }
@@ -45,15 +45,15 @@ export default {
 通过插槽定制内容
 
 ```html
-<i-tabbar v-model="active3" :fixed="false" color="#282212" active-color="#f7c635">
+<i-tabbar v-model="active" :fixed="false" color="#282212" active-color="#f7c635">
   <i-tabbar-item label="购物车" value="/shopping-cart">
-    <img slot="icon" slot-scope="props" :src="props.active ? 'https://s1.ax2x.com/2018/11/02/5mFinO.png' : 'https://s1.ax2x.com/2018/11/02/5mF2Qq.png'">
+    <img slot="icon" slot-scope="props" :src="props.active ? 'https://s2.ax1x.com/2019/05/24/ViztB9.png' : 'https://s2.ax1x.com/2019/05/24/VizN7R.png'">
   </i-tabbar-item>
   <i-tabbar-item label="收藏" value="/star">
-    <img slot="icon" slot-scope="props" :src="props.active ? 'https://s1.ax2x.com/2018/11/02/5mFoZr.png' : 'https://s1.ax2x.com/2018/11/02/5mF7ce.png'">
+    <img slot="icon" slot-scope="props" :src="props.active ? 'https://s2.ax1x.com/2019/05/24/VFSPb9.png' : 'https://s2.ax1x.com/2019/05/24/VizaA1.png'">
   </i-tabbar-item>
   <i-tabbar-item label="分享" value="/share">
-    <img slot="icon" slot-scope="props" :src="props.active ? 'https://s1.ax2x.com/2018/11/02/5mFRid.png' : 'https://s1.ax2x.com/2018/11/02/5mFnXR.png'">
+    <img slot="icon" slot-scope="props" :src="props.active ? 'https://s2.ax1x.com/2019/05/24/Vizdtx.png' : 'https://s2.ax1x.com/2019/05/24/VizYnJ.png'">
   </i-tabbar-item>
 </i-tabbar>
 ```
@@ -62,7 +62,7 @@ export default {
 export default {
   data() {
     return {
-      active3: '/share'
+      active: '/share'
     }
   }
 }

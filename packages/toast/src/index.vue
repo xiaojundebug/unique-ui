@@ -6,7 +6,7 @@
     :overlay="overlay"
     :overlay-opacity="0"
     transition-name="fadeIn"
-    @clickOverlay="onClickOverlay"
+    @click-overlay="onClickOverlay"
     @touchmove.prevent
   >
     <div class="toast__icon">

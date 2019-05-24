@@ -40,7 +40,7 @@ export default {
   methods: {
     // 响应overlay事件
     handleOverlayClick() {
-      this.$emit('clickOverlay')
+      this.$emit('click-overlay')
     }
   }
 }

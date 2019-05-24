@@ -12,8 +12,15 @@ body {
   color: $color-dark;
   -webkit-tap-highlight-color: transparent;
 }
+
 button,
 input,
 textarea {
   outline: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }

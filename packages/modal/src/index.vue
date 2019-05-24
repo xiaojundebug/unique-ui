@@ -4,7 +4,7 @@
     :show="show"
     :overlay="overlay"
     :transition-name="transitionName"
-    @clickOverlay="onClickOverlay"
+    @click-overlay="onClickOverlay"
     @touchmove.prevent
   >
     <slot name="title">

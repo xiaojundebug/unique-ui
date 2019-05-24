@@ -12,5 +12,3 @@ Vue.use(uniqueUI)
 位于`unique-ui/packages/theme/common/_var.scss` -->
 
 #### 俺还不会呢💔
-
-<img src="https://s1.ax2x.com/2018/11/02/5mFRid.png">

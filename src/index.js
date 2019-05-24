@@ -22,6 +22,7 @@ import Field from 'packages/field'
 import Popup from 'packages/popup'
 import Toast from 'packages/toast'
 import Modal from 'packages/modal'
+import Actionsheet from 'packages/actionsheet'
 
 const components = [
   Icon,
@@ -47,7 +48,8 @@ const components = [
   Field,
   Popup,
   Toast,
-  Modal
+  Modal,
+  Actionsheet
 ]
 
 export {
@@ -74,7 +76,8 @@ export {
   Field,
   Popup,
   Toast,
-  Modal
+  Modal,
+  Actionsheet
 }
 
 const uninstallComponents = ['Toast', 'Modal']

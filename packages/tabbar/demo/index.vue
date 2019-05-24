@@ -17,13 +17,13 @@
     <demo-block title="高级用法">
       <i-tabbar v-model="active3" :fixed="false" color="#282212" active-color="#f7c635">
         <i-tabbar-item label="购物车" value="/shopping-cart">
-          <img slot="icon" slot-scope="props" :src="props.active ? 'https://s1.ax2x.com/2018/11/02/5mFinO.png' : 'https://s1.ax2x.com/2018/11/02/5mF2Qq.png'">
+          <img slot="icon" slot-scope="props" :src="props.active ? 'https://s2.ax1x.com/2019/05/24/ViztB9.png' : 'https://s2.ax1x.com/2019/05/24/VizN7R.png'">
         </i-tabbar-item>
         <i-tabbar-item label="收藏" value="/star">
-          <img slot="icon" slot-scope="props" :src="props.active ? 'https://s1.ax2x.com/2018/11/02/5mFoZr.png' : 'https://s1.ax2x.com/2018/11/02/5mF7ce.png'">
+          <img slot="icon" slot-scope="props" :src="props.active ? 'https://s2.ax1x.com/2019/05/24/VFSPb9.png' : 'https://s2.ax1x.com/2019/05/24/VizaA1.png'">
         </i-tabbar-item>
         <i-tabbar-item label="分享" value="/share">
-          <img slot="icon" slot-scope="props" :src="props.active ? 'https://s1.ax2x.com/2018/11/02/5mFRid.png' : 'https://s1.ax2x.com/2018/11/02/5mFnXR.png'">
+          <img slot="icon" slot-scope="props" :src="props.active ? 'https://s2.ax1x.com/2019/05/24/Vizdtx.png' : 'https://s2.ax1x.com/2019/05/24/VizYnJ.png'">
         </i-tabbar-item>
       </i-tabbar>
     </demo-block>

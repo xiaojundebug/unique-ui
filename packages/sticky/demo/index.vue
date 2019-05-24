@@ -10,7 +10,7 @@
       </i-sticky>
       <p v-for="item in 6">{{ item }}</p>
       <i-sticky :top="100">
-        <img src="https://s1.ax2x.com/2018/11/10/5m6blY.jpg" alt="5m6blY.jpg" style="border: 1px solid #eee;" />
+        <img src="https://s2.ax1x.com/2019/05/24/VivLrj.gif" alt="5m6blY.jpg" style="border: 1px solid #eee;" />
       </i-sticky>
       <p v-for="item in 8">{{ item }}</p>
       <i-sticky :top="300">

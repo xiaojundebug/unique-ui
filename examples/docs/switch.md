@@ -3,13 +3,13 @@
 #### 简单用法
 
 ```html
-<i-switch v-model="value1"></i-switch>
+<i-switch v-model="value"></i-switch>
 ```
 
 #### 禁用状态
 
 ```html
-<i-switch v-model="value2" disabled></i-switch>
+<i-switch v-model="value" disabled></i-switch>
 ```
 
 #### 加载状态
@@ -17,13 +17,13 @@
 设置`loading`属性开启加载状态，此时不可点击
 
 ```html
-<i-switch v-model="value3" loading></i-switch>
+<i-switch v-model="value" loading></i-switch>
 ```
 
 #### 自定义颜色
 
 ```html
-<i-switch v-model="value4" active-color="#409eff" inactive-color="#f86f74"></i-switch>
+<i-switch v-model="value" active-color="#409eff" inactive-color="#f86f74"></i-switch>
 ```
 
 #### 搭配 Cell 使用
@@ -31,7 +31,7 @@
 ```html
 <i-cell-group>
   <i-cell title="允许通知">
-    <i-switch slot="value" v-model="value5" active-color="#24bc59" inactive-color="#f86f74"></i-switch>
+    <i-switch slot="value" v-model="value" active-color="#24bc59" inactive-color="#f86f74"></i-switch>
   </i-cell>
 </i-cell-group>
 ```

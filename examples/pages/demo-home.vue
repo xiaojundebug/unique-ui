@@ -7,7 +7,6 @@
 </template>
 
 <script>
-import 'highlight.js/styles/solarized-dark.css'
 import DemoNav from '../components/demo-nav'
 import navConfig from 'examples/nav.config'
 

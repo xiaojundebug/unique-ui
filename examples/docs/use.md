@@ -3,10 +3,7 @@
 字体图标文件未集成到`unique-ui`中，请在`index.html`中引入以下样式
 
 ```html
-<link
-  href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"
-  rel="stylesheet"
-/>
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 <link href="//at.alicdn.com/t/font_895870_fugdyroqsrt.css" rel="stylesheet" />
 ```
 

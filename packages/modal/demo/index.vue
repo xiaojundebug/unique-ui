@@ -16,7 +16,7 @@
         <i-button @click="show = true">组件调用</i-button>
       </div>
     </demo-block>
-    <i-modal v-model="show" closeOnClickOverlay confirmText="CLOSE" transition-name="modal" style="width:66%">
+    <i-modal v-model="show" close-on-click-overlay confirm-text="CLOSE" transition-name="modal" style="width:66%">
       <img src="https://xiaojun1994.top/images/avatar.jpg" alt="avatar" style="display:block;width:100%">
     </i-modal>
   </div>
@@ -48,12 +48,15 @@ export default {
   }
   .modal-enter-active,
   .modal-leave-active {
-    transition: opacity 0.45s, transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition: opacity 0.45s, transform 0.45s;
   }
-  .modal-enter,
+  .modal-enter {
+    opacity: 0;
+    transform: translate3d(-50%, -50%, 0) scale(2);
+  }
   .modal-leave-to {
     opacity: 0;
-    transform: translate3d(-50%, 100%, 0) scale(0) skew(45deg, 45deg);
+    transform: translate3d(-50%, -50%, 0) scale(1.5);
   }
 }
 </style>

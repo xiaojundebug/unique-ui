@@ -28,7 +28,7 @@ this.$modal.alert('异步关闭', { title: '提示', autoClose: false }).then(cl
 #### 组件调用
 
 ```html
-<i-modal v-model="show" closeOnClickOverlay confirmText="CLOSE" transition-name="modal" style="width:66%">
+<i-modal v-model="show" close-on-click-overlay confirm-text="CLOSE" transition-name="modal" style="width:66%">
   <img src="https://xiaojun1994.top/images/avatar.jpg" alt="avatar" style="display:block;width:100%">
 </i-modal>
 ```
@@ -36,12 +36,15 @@ this.$modal.alert('异步关闭', { title: '提示', autoClose: false }).then(cl
 ```scss
 .modal-enter-active,
 .modal-leave-active {
-  transition: opacity 0.45s, transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: opacity 0.45s, transform 0.45s;
 }
-.modal-enter,
+.modal-enter {
+  opacity: 0;
+  transform: translate3d(-50%, -50%, 0) scale(2);
+}
 .modal-leave-to {
   opacity: 0;
-  transform: translate3d(-50%, 100%, 0) scale(0) skew(45deg, 45deg);
+  transform: translate3d(-50%, -50%, 0) scale(1.5);
 }
 ```
 
@@ -49,6 +52,7 @@ this.$modal.alert('异步关闭', { title: '提示', autoClose: false }).then(cl
 
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|
+| show | 是否显示 | `Boolean` | `false` |
 | type | 类型，可选值为`alert | confirm` | `String` | `'alert'` |
 | title | 标题 | `String` | `` |
 | confirmText | 确定按钮文字 | `String` | `确认` |
@@ -61,15 +65,14 @@ this.$modal.alert('异步关闭', { title: '提示', autoClose: false }).then(cl
 
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|
-| show | 是否显示，`v-model`是`v-bind:show`与`v-on:toggle`的简写方式 | `Boolean` | `false` |
 | type | 同 Options 中一致 | `String` | `normal` |
 | title | 同 Options 中一致 | `String` | `''` |
 | text | 文字内容 | `String` | `''` |
 | overlay | 是否显示蒙版 | `Boolean` | `true` |
-| confirmText | 同 Options 中一致 | `String` | `确认` |
-| cancelText | 同 Options 中一致 | `String` | `取消` |
-| closeOnClickOverlay | 同 Options 中一致	 | `Boolean` | `false` |
-| transitionName | 同`Popup组件`中一致	 | `String` | `''` |
+| confirm-text | 同 Options 中一致 | `String` | `确认` |
+| cancel-text | 同 Options 中一致 | `String` | `取消` |
+| close-on-click-overlay | 同 Options 中一致	 | `Boolean` | `false` |
+| transition-name | 同`Popup组件`中一致	 | `String` | `''` |
 
 
 #### Slots
@@ -84,7 +87,6 @@ this.$modal.alert('异步关闭', { title: '提示', autoClose: false }).then(cl
 
 | 事件名 | 说明 | 参数 |
 |------|------|------|
-| confirmText | 点击确认按钮时触发 | - |
-| cancel | 点击取消按钮或蒙版时触发 | - |
-| toggle | 每次切换显示状态都会触发，`v-model`是`v-bind:show`与`v-on:toggle`的简写方式 | - |
+| confirm | 点击确认按钮时触发 | - |
+| cancel | 取消时触发 | - |
 
