@@ -2,7 +2,7 @@
   <header class="doc-header">
     <div class="doc-header__inner">
       <router-link to="/">
-        <doc-logo></doc-logo>
+        <doc-brand></doc-brand>
         
         <span class="version">v{{ require('../../package.json').version }}</span>
       </router-link>
@@ -16,9 +16,9 @@
 </template>
 
 <script>
-import DocLogo from './doc-logo'
+import DocBrand from './doc-brand'
 export default {
-  components: { DocLogo }
+  components: { DocBrand }
 }
 </script>
 

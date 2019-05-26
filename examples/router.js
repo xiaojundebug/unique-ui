@@ -1,5 +1,4 @@
 import navConfig from './nav.config'
-import DemoHome from './pages/demo-home'
 import './utils/iframe-router'
 
 const registerRoutes = isDemo => {
@@ -8,8 +7,13 @@ const registerRoutes = isDemo => {
   if (isDemo) {
     routes.push({
       path: '/',
-      component: DemoHome,
+      component: () => import('./pages/demo-home'),
       hideNavBar: true
+    })
+  } else {
+    routes.push({
+      path: '/',
+      component: () => import('../README')
     })
   }
 
