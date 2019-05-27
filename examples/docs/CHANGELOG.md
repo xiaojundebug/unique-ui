@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.2](https://github.com/xiaojun1994/unique-ui/compare/v0.4.1...v0.4.2) (2019-05-27)
+
+
+### Bug Fixes
+
+* 修复field、toast、modal引入时报错问题 ([75f39af](https://github.com/xiaojun1994/unique-ui/commit/75f39af))
+
+
+
 ### [0.4.1](https://github.com/xiaojun1994/unique-ui/compare/v0.4.0...v0.4.1) (2019-05-27)
 
 
