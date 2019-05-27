@@ -1,6 +1,15 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.4.1](https://github.com/xiaojun1994/unique-ui/compare/v0.4.0...v0.4.1) (2019-05-27)
+
+
+### Bug Fixes
+
+* 修复构建错误 ([44cd4e6](https://github.com/xiaojun1994/unique-ui/commit/44cd4e6))
+
+
 
 # [0.4.0](https://github.com/xiaojun1994/unique-ui/compare/v0.3.0...v0.4.0) (2019-05-27)
 
