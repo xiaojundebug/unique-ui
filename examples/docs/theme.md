@@ -14,10 +14,10 @@ npm i unique-theme-builder -g
 
 ```bash
 # 必须在你工程根目录下输入
-utb # 等同于 utb -o ./theme
+utb # 等同于 utb -o .theme
 ```
 
-你可以通过`-o`参数指定打包目录，默认位于 ./theme
+你可以通过`-o`参数指定打包目录，默认 .theme
 
 4、引入主题
 
@@ -32,7 +32,7 @@ utb # 等同于 utb -o ./theme
       "component",
       {
         "libraryName": "unique-ui",
-        "styleLibraryName": "~theme"
+        "styleLibraryName": "~.theme"
       }
     ]
   ]
