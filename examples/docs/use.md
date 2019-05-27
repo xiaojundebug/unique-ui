@@ -30,7 +30,7 @@ _可以帮你自动引入这个组件的样式_
 
 首先安装 [babel-plugin-component](https://github.com/ElementUI/babel-plugin-component) 库
 
-```shell
+```bash
 npm install babel-plugin-component -D
 ```
 

@@ -1,6 +1,6 @@
 <template>
   <div class="doc-brand">
-    <section class="animated jello delay-1s">
+    <section ref="logoWrapper">
       <ul class="doc-brand__logo">
         <li v-for="item in 6"></li>
       </ul>
@@ -11,7 +11,13 @@
 
 <script>
 export default {
-  methods: {}
+  mounted() {
+    const hint = window.localStorage.getItem('LOGO_HINT')
+    if (!hint) {
+      this.$refs.logoWrapper.classList = 'animated bounce delay-1s'
+      window.localStorage.setItem('LOGO_HINT', 1)
+    }
+  }
 }
 </script>
 

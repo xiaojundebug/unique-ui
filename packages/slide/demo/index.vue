@@ -27,7 +27,7 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-@import '../../theme/common/var';
+@import '../../theme/src/common/var';
 
 .demo-slide {
   .i-slide-item {

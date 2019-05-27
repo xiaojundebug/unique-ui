@@ -53,6 +53,11 @@
   line-height: 1.5em;
 }
 
+.doc-container pre.hljs .hljs-comment {
+  font-style: italic;
+  font-size: 13px;
+}
+
 .doc-container code {
   font-family: 'Fira Code Retina', 'Source Code Pro', Consolas, 'PingFang SC';
 }

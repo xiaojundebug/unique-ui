@@ -47,7 +47,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../theme/common/var';
+@import '../../theme/src/common/var';
 
 .demo-actionsheet {
   .wrapper {
