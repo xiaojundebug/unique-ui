@@ -9,7 +9,12 @@
     ]
   ],
   "plugins": [
-    "@babel/plugin-transform-runtime",
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "helpers": false
+      }
+    ],
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-transform-object-assign"
   ]
