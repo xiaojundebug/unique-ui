@@ -11,11 +11,11 @@
   >
     <div class="toast__icon">
       <slot name="icon">
-        <i-loading
+        <i-spinner
           v-if="type == 'loading'"
           type="ios"
           color="#fff"
-        ></i-loading>
+        ></i-spinner>
         <i
           v-else-if="type == 'success'"
           class="iconfont icon-success"

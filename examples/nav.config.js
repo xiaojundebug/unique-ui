@@ -147,16 +147,16 @@ export default [
         demo: () => import('packages/actionsheet/demo')
       },
       {
-        name: 'Loading 加载',
-        routePath: '/loading',
-        doc: () => import('docs/loading'),
-        demo: () => import('packages/loading/demo')
-      },
-      {
         name: 'Modal 弹窗',
         routePath: '/modal',
         doc: () => import('docs/modal'),
         demo: () => import('packages/modal/demo')
+      },
+      {
+        name: 'Spinner 加载动画',
+        routePath: '/spinner',
+        doc: () => import('docs/spinner'),
+        demo: () => import('packages/spinner/demo')
       },
       {
         name: 'Toast 消息提示',

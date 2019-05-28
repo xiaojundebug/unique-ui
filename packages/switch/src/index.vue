@@ -5,22 +5,22 @@
     @click="onClick"
   >
     <div class="i-switch__node">
-      <i-loading
+      <i-spinner
         v-if="loading"
         type="crescent"
         size="16px"
         color="#ccc"
-      ></i-loading>
+      ></i-spinner>
     </div>
   </div>
 </template>
 
 <script>
-import ILoading from 'unique-ui/packages/loading'
+import ISpinner from 'unique-ui/packages/spinner'
 
 export default {
   name: 'ISwitch',
-  components: { ILoading },
+  components: { ISpinner },
   model: {
     prop: 'value',
     event: 'change'

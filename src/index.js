@@ -3,7 +3,7 @@ import Button from 'packages/button'
 import NavBar from 'packages/nav-bar'
 import Tabbar from 'packages/tabbar'
 import TabbarItem from 'packages/tabbar-item'
-import Loading from 'packages/loading'
+import Spinner from 'packages/spinner'
 import Tag from 'packages/tag'
 import Row from 'packages/row'
 import Col from 'packages/col'
@@ -30,7 +30,7 @@ const components = [
   NavBar,
   Tabbar,
   TabbarItem,
-  Loading,
+  Spinner,
   Tag,
   Row,
   Col,
@@ -58,7 +58,7 @@ export {
   NavBar,
   Tabbar,
   TabbarItem,
-  Loading,
+  Spinner,
   Tag,
   Row,
   Col,

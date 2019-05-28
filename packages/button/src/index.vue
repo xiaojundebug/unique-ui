@@ -4,10 +4,10 @@
     :class="classList"
     @click="cb"
   >
-    <i-loading
+    <i-spinner
       v-if="loading"
-      :color="spinerColor"
-      :size="spinerSize"
+      :color="spinnerColor"
+      :size="spinnerSize"
     />
     <slot />
   </button>
@@ -44,10 +44,10 @@ export default {
         }
       ]
     },
-    spinerColor() {
+    spinnerColor() {
       return this.type === 'default' ? '#000' : '#fff'
     },
-    spinerSize() {
+    spinnerSize() {
       return { normal: '17px', large: '20px', small: '13px', mini: '10px' }[this.size]
     }
   },

@@ -1,5 +1,5 @@
 @import './common/var';
-@import './loading';
+@import './spinner.scss';
 
 .i-button {
   position: relative;
@@ -13,7 +13,7 @@
   background-color: $color-light;
   color: $color-dark;
   cursor: pointer;
-  .i-loading{
+  .i-spinner{
     margin-right: 3px;
   }
   &::before {
