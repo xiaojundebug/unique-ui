@@ -2,11 +2,13 @@
   <div
     :class="wrapperClassList"
     ref="wrapper"
-    :style="wrapperStyle">
+    :style="wrapperStyle"
+  >
     <div
       class="i-sticky__inner"
       :style="innerStyle"
-      ref="inner">
+      ref="inner"
+    >
       <slot></slot>
     </div>
   </div>

@@ -2,11 +2,13 @@
   <button
     :disabled="isDisable"
     :class="classList"
-    @click="cb">
+    @click="cb"
+  >
     <i
       class="fa fa-refresh fa-spin"
-      v-if="loading"/>
-    <slot/>
+      v-if="loading"
+    />
+    <slot />
   </button>
 </template>
 

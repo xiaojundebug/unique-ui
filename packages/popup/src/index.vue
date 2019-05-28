@@ -2,7 +2,8 @@
   <transition :name="computedTransitionName">
     <div
       :class="classList"
-      v-show="show">
+      v-show="show"
+    >
       <slot></slot>
     </div>
   </transition>

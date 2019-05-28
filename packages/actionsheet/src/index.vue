@@ -3,10 +3,12 @@
     class="i-actionsheet"
     :show="show"
     position="bottom"
-    @click-overlay="onClickOverlay">
+    @click-overlay="onClickOverlay"
+  >
     <div
       class="i-actionsheet__header i-1px--b"
-      v-if="$slots.header">
+      v-if="$slots.header"
+    >
       <slot name="header"></slot>
     </div>
     <ul class="i-actionsheet__body">
@@ -15,13 +17,18 @@
         :key="index"
         :class="['i-actionsheet__action', item.className, { 'i-1px--b': index < actions.length - 1, 'i-actionsheet__action--disabled': item.disabled }]"
         @click="onClick(item)"
-      >{{ item.name }}</li>
+      >
+        {{ item.name }}
+      </li>
     </ul>
     <div
       class="i-actionsheet__footer"
       v-if="cancelText || $slots.footer"
-      @click="onCancel">
-      <slot name="footer">{{ cancelText }}</slot>
+      @click="onCancel"
+    >
+      <slot name="footer">
+        {{ cancelText }}
+      </slot>
     </div>
   </i-popup>
 </template>

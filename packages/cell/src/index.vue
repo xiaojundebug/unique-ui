@@ -8,12 +8,13 @@
       class="i-cell__icon"
     >
       <slot name="icon">
-        <i :class="`fa fa-fw fa-${this.icon}`"/>
+        <i :class="`fa fa-fw fa-${this.icon}`" />
       </slot>
     </div>
     <div
       v-if="hdIsShow"
-      class="i-cell__hd">
+      class="i-cell__hd"
+    >
       <slot name="title">
         <span class="i-cell__title">{{ title }}</span>
         <span

@@ -5,7 +5,8 @@
       class="i-overlay"
       :style="style"
       @click="handleClick"
-      @touchmove.prevent></div>
+      @touchmove.prevent
+    ></div>
   </transition>
 </template>
 <script>

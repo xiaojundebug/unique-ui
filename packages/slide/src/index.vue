@@ -7,17 +7,20 @@
       @touchmove="onTouchMove"
       @touchend="onTouchEnd"
       @touchcancel="onTouchEnd"
-      @transitionend="onTransitionEnd">
+      @transitionend="onTransitionEnd"
+    >
       <slot></slot>
     </div>
     <slot
       name="indicator"
-      :active="activeIndicator">
+      :active="activeIndicator"
+    >
       <ul class="i-slide__indicators">
         <li
           v-for="index in count"
           :class="{ 'i-slide__indicator': true, active: index - 1 === activeIndicator }"
-          :key="index"></li>
+          :key="index"
+        ></li>
       </ul>
     </slot>
   </div>

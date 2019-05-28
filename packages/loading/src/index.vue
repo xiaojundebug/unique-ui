@@ -1,8 +1,8 @@
 <template>
   <div
     class="i-loading"
-    v-html="spiner">
-
+    v-html="spiner"
+  >
   </div>
 </template>
 

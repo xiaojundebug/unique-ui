@@ -1,15 +1,21 @@
 <template>
   <div
     :class="classList"
-    @click.stop="toggle">
+    @click.stop="toggle"
+  >
     <slot
       name="icon"
-      :value="value"><i
+      :value="value"
+    >
+      <i
         class="i-checkbox__icon iconfont icon-check"
-        :style="iconStyle" /></slot>
+        :style="iconStyle"
+      />
+    </slot>
     <span
       class="i-checkbox__label"
-      v-if="$slots.default"><slot></slot></span>
+      v-if="$slots.default"
+    ><slot></slot></span>
   </div>
 </template>
 

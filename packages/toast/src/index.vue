@@ -14,19 +14,25 @@
         <i-loading
           v-if="type == 'loading'"
           type="ios"
-          color="#fff"></i-loading>
+          color="#fff"
+        ></i-loading>
         <i
           v-else-if="type == 'success'"
-          class="iconfont icon-success"></i>
+          class="iconfont icon-success"
+        ></i>
         <i
           v-else-if="type == 'fail'"
-          class="iconfont icon-fail"></i>
+          class="iconfont icon-fail"
+        ></i>
       </slot>
     </div>
     <div
       v-if="text || $slots.text"
-      class="toast__text ellipsis">
-      <slot name="text">{{ text }}</slot>
+      class="toast__text ellipsis"
+    >
+      <slot name="text">
+        {{ text }}
+      </slot>
     </div>
   </i-popup>
 </template>

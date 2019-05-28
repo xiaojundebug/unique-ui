@@ -2,13 +2,15 @@
   <div
     :class="classList"
     :style="style"
-    @click="onClick">
+    @click="onClick"
+  >
     <div class="i-switch__node">
       <i-loading
         v-if="loading"
         type="crescent"
         size="16px"
-        color="#ccc"></i-loading>
+        color="#ccc"
+      ></i-loading>
     </div>
   </div>
 </template>

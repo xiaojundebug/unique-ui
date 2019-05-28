@@ -2,10 +2,12 @@
   <div
     :class="classList"
     v-show="isShow"
-    @click="onClick">
+    @click="onClick"
+  >
     <div
       class="i-notice-bar__inner"
-      :style="innerStyle">
+      :style="innerStyle"
+    >
       <div class="i-notice-bar__left">
         <slot name="left">
           <i :class="leftIconClassName"></i>
@@ -14,7 +16,8 @@
 
       <div
         class="i-notice-bar__main"
-        ref="wrapper">
+        ref="wrapper"
+      >
         <div
           :class="contentClass"
           :style="contentStyle"
@@ -29,7 +32,8 @@
       <div
         class="i-notice-bar__right"
         v-if="mode || $slots.right"
-        @click.stop="onClickRight">
+        @click.stop="onClickRight"
+      >
         <slot name="right">
           <i :class="rightIconClassName"></i>
         </slot>

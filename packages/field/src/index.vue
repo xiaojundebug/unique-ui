@@ -2,10 +2,12 @@
   <i-cell
     :class="classList"
     :title="label"
-    :icon="icon">
+    :icon="icon"
+  >
     <div
       v-if="$slots['icon']"
-      slot="icon">
+      slot="icon"
+    >
       <slot name="icon"></slot>
     </div>
     <template>
@@ -38,7 +40,8 @@
     </template>
     <div
       v-if="$slots['right-icon']"
-      slot="right-icon">
+      slot="right-icon"
+    >
       <slot name="right-icon"></slot>
     </div>
   </i-cell>
