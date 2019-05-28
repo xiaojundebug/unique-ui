@@ -4,9 +4,10 @@
     :class="classList"
     @click="cb"
   >
-    <i
-      class="fa fa-refresh fa-spin"
+    <i-loading
       v-if="loading"
+      :color="spinerColor"
+      :size="spinerSize"
     />
     <slot />
   </button>
@@ -42,6 +43,12 @@ export default {
           'i-button--loading': this.loading
         }
       ]
+    },
+    spinerColor() {
+      return this.type === 'default' ? '#000' : '#fff'
+    },
+    spinerSize() {
+      return { normal: '17px', large: '20px', small: '13px', mini: '10px' }[this.size]
     }
   },
   methods: {

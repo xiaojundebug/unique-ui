@@ -4,6 +4,9 @@
       <div class="demo-button__row">
         <i-button type="default">默认按钮</i-button>
         <i-button type="primary">主要按钮</i-button>
+        <i-button type="info">信息按钮</i-button>
+        <i-button type="danger">危险按钮</i-button>
+        <i-button type="warning">警告按钮</i-button>
       </div>
     </demo-block>
     <demo-block title="使用图标">
@@ -12,20 +15,16 @@
           <i-icon name="search"></i-icon>
           <span>搜索</span>
         </i-button>
-        <i-button type="default">
-          <i-icon name="upload"></i-icon>
-          <span>上传</span>
-        </i-button>
       </div>
     </demo-block>
     <demo-block title="禁用状态">
       <div class="demo-button__row">
-        <i-button type="primary" disabled>禁用状态</i-button>
+        <i-button type="danger" disabled>禁用状态</i-button>
       </div>
     </demo-block>
-    <demo-block title="加载状态">
+    <demo-block title="Loading状态">
       <div class="demo-button__row">
-        <i-button type="default" loading>加载状态</i-button>
+        <i-button type="info" loading>提交</i-button>
       </div>
     </demo-block>
     <demo-block title="圆角按钮">
@@ -54,8 +53,11 @@ export default {}
 .demo-button {
   &__row {
     padding: 0 1em 1em 1em;
-    .i-button:not(:last-child) {
+    .i-button{
+      margin-bottom: 10px;
+      &:not(:last-child) {
       margin-right: 10px;
+    }
     }
   }
 }

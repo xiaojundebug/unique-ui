@@ -1,15 +1,21 @@
 @import './common/var';
+@import './loading';
 
 .i-button {
   position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   height: $button-height-default;
   padding: 0 15px;
   border: 1px solid $border-color;
   border-radius: $border-radius;
-  line-height: $button-height-default - 2px;
   background-color: $color-light;
   color: $color-dark;
   cursor: pointer;
+  .i-loading{
+    margin-right: 3px;
+  }
   &::before {
     content: ' ';
     position: absolute;
@@ -40,23 +46,40 @@
     background-color: $primary-color;
     color: $color-light;
   }
+  &--info {
+    border: 1px solid $info-color;
+    background-color: $info-color;
+    color: $color-light;
+  }
+  // &--success {
+  //   border: 1px solid $success-color;
+  //   background-color: $success-color;
+  //   color: $color-light;
+  // }
+  &--danger {
+    border: 1px solid $danger-color;
+    background-color: $danger-color;
+    color: $color-light;
+  }
+  &--warning {
+    border: 1px solid $warning-color;
+    background-color: $warning-color;
+    color: $color-light;
+  }
   &--round {
     border-radius: 10em;
   }
   &--large {
     width: 100%;
     height: $button-height-large;
-    line-height: $button-height-large - 2px;
   }
   &--small {
     height: $button-height-small;
-    line-height: $button-height-small - 2px;
     padding: 0 8px;
     font-size: 13px;
   }
   &--mini {
     height: $button-height-mini;
-    line-height: $button-height-mini - 2px;
     padding: 0 5px;
     font-size: 12px;
   }

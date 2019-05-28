@@ -4,6 +4,7 @@
   "description": "A mobile component library for Vue2.x",
   "main": "lib/index.js",
   "license": "MIT",
+  "homepage": "https://xiaojun1994.github.io/unique-ui/",
   "repository": "git@github.com:xiaojun1994/unique-ui.git",
   "author": "xiaojun1994 <362896731@qq.com>",
   "scripts": {
