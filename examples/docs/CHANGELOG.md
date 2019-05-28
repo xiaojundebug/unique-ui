@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/xiaojun1994/unique-ui/compare/v0.4.2...v0.5.0) (2019-05-28)
+
+
+### Bug Fixes
+
+* 修复toast样式显示问题 ([360b20d](https://github.com/xiaojun1994/unique-ui/commit/360b20d))
+
+
+### Features
+
+* button组件type属性新增几个值，修改button组件loading样式 ([f040a56](https://github.com/xiaojun1994/unique-ui/commit/f040a56))
+
+
+
 ## [0.4.2](https://github.com/xiaojun1994/unique-ui/compare/v0.4.1...v0.4.2) (2019-05-27)
 
 
