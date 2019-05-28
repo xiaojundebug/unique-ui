@@ -12,27 +12,26 @@
 <i-button type="warning">警告按钮</i-button>
 ```
 
-#### 使用图标
+#### 空心按钮
 
 ```html
-<i-button type="default">
-  <i-icon name="search"></i-icon>
-  <span>搜索</span>
-</i-button>
+<i-button type="info" plain>空心按钮</i-button>
+<i-button type="danger" plain>空心按钮</i-button>
 ```
 
-#### 禁用状态
-
-通过`disabled`属性来禁用按钮
+#### 虚线按钮
 
 ```html
-<i-button type="danger" disabled>禁用状态</i-button>
+<i-button type="info" dashed>虚线按钮</i-button>
+<i-button type="danger" dashed>虚线按钮</i-button>
 ```
 
-#### 加载状态
+#### 圆形按钮
 
 ```html 
-<i-button type="info" loading>提交</i-button>
+<i-button type="default" circle><i-icon name="search"/></i-button>
+<i-button type="info" circle plain><i-icon name="search"/></i-button>
+<i-button type="danger" circle dashed><i-icon name="search"/></i-button>
 ```
 
 #### 圆角按钮
@@ -41,9 +40,19 @@
 <i-button type="default" round>圆角按钮</i-button>
 ```
 
-#### 按钮尺寸
+#### 禁用状态
 
-支持`large`、`normal`、`small`、`mini`四种尺寸，默认为`normal`
+```html 
+<i-button type="danger" disabled>禁用状态</i-button>
+```
+
+#### Loading状态
+
+```html 
+<i-button type="info" loading>提交</i-button>
+```
+
+#### 按钮尺寸
 
 ```html 
 <i-button type="default" size="large">大号按钮</i-button>
@@ -57,10 +66,13 @@
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|
 | type | 类型，可选值为 `default` `primary` `info` `danger` `warning` | `String` | `default` |
+| plain | 是否为空心按钮，`default`类型不适用 | `Boolean` | `false` |
+| dashed | 是否为虚线按钮，`default`类型不适用 | `Boolean` | `false` |
+| circle | 是否为圆形按钮 | `Boolean` | `false` |
+| round | 是否为圆角按钮 | `Boolean` | `false` |
+| disabled | 是否禁用 | `Boolean` | `false` |
+| loading | 是否为loading状态 | `Boolean` | `false` |
 | size | 尺寸，可选值为 `normal` `large` `small` `mini` | `String` | `normal` |
-| disabled | 是否禁用按钮 | `Boolean` | `false` |
-| loading | 是否显示为加载状态 | `Boolean` | `false` |
-| round | 是否为圆形按钮 | `Boolean` | `false` |
 
 #### Events
 

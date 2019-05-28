@@ -6,16 +6,78 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: $button-height-default;
-  padding: 0 15px;
-  border: 1px solid $border-color;
+  border: 1px solid currentColor;
   border-radius: $border-radius;
-  background-color: $color-light;
-  color: $color-dark;
+  background-color: currentColor;
   cursor: pointer;
-  .i-spinner{
-    margin-right: 3px;
+
+  &:disabled,
+  &--loading {
+    opacity: 0.5;
+    cursor: not-allowed;
+    &:active::before { opacity: 0; }
   }
+
+  &--default { color: $border-color; .i-button__text { color: $color-dark; } }
+
+  &--primary { color: $primary-color; }
+
+  &--info { color: $info-color; }
+
+  &--danger { color: $danger-color; }
+
+  &--warning { color: $warning-color; }
+
+  &--round { border-radius: 10em; }
+
+  &--plain,
+  &--dashed {
+    background-color: #fff;
+    .i-button__text {
+      color: currentColor;
+    }
+  }
+
+  &--dashed { border-style: dashed; }
+
+  &--circle {
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    &.i-button--normal { width: $button-height-normal !important; }
+    &.i-button--large { width: $button-height-large !important; }
+    &.i-button--small { width: $button-height-small !important; }
+    &.i-button--mini { width: $button-height-mini !important; }
+  }
+
+  &--normal {
+    height: $button-height-normal;
+    padding: 0 15px;
+    font-size: 14px;
+  }
+
+  &--large {
+    width: 100%;
+    height: $button-height-large;
+    padding: 0 15px;
+    font-size: 15px;
+  }
+
+  &--small {
+    height: $button-height-small;
+    padding: 0 8px;
+    font-size: 13px;
+  }
+
+  &--mini {
+    height: $button-height-mini;
+    padding: 0 5px;
+    font-size: 12px;
+  }
+
+  &__text { color: $color-light; }
+
+  .i-spinner { margin-right: 3px; }
+  
   &::before {
     content: ' ';
     position: absolute;
@@ -30,57 +92,6 @@
     border-radius: inherit;
     transform: translate(-50%, -50%);
   }
-  &:active::before {
-    opacity: 0.15;
-  }
-  &:disabled,
-  &--loading {
-    opacity: 0.5;
-    cursor: not-allowed;
-    &:active::before {
-      opacity: 0;
-    }
-  }
-  &--primary {
-    border: 1px solid $primary-color;
-    background-color: $primary-color;
-    color: $color-light;
-  }
-  &--info {
-    border: 1px solid $info-color;
-    background-color: $info-color;
-    color: $color-light;
-  }
-  // &--success {
-  //   border: 1px solid $success-color;
-  //   background-color: $success-color;
-  //   color: $color-light;
-  // }
-  &--danger {
-    border: 1px solid $danger-color;
-    background-color: $danger-color;
-    color: $color-light;
-  }
-  &--warning {
-    border: 1px solid $warning-color;
-    background-color: $warning-color;
-    color: $color-light;
-  }
-  &--round {
-    border-radius: 10em;
-  }
-  &--large {
-    width: 100%;
-    height: $button-height-large;
-  }
-  &--small {
-    height: $button-height-small;
-    padding: 0 8px;
-    font-size: 13px;
-  }
-  &--mini {
-    height: $button-height-mini;
-    padding: 0 5px;
-    font-size: 12px;
-  }
+
+  &:active::before { opacity: 0.05; }
 }

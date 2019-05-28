@@ -22,5 +22,7 @@ window.syncPath = function() {
 }
 
 window.changePath = function(path = '') {
-  window.vueRouter.replace(path)
+  if (window.vueRouter.history.current.path !== path) {
+    window.vueRouter.replace(path)
+  }
 }

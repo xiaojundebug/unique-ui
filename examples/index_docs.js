@@ -33,7 +33,7 @@ router.beforeEach((to, from, next) => {
 
 router.afterEach((to, from) => {
   Vue.prototype.$Progress.finish()
-  window.scrollTo(0, 0)
+  window.document.querySelector('.doc-container').scrollTo(0, 0)
   Vue.nextTick(window.syncPath)
 })
 

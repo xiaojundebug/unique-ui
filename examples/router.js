@@ -13,7 +13,8 @@ const registerRoutes = isDemo => {
   } else {
     routes.push({
       path: '/',
-      component: () => import('../README')
+      component: () => import('../README'),
+      hideNavBar: true
     })
   }
 

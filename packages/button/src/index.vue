@@ -9,7 +9,9 @@
       :color="spinnerColor"
       :size="spinnerSize"
     />
-    <slot />
+    <span class="i-button__text">
+      <slot />
+    </span>
   </button>
 </template>
 
@@ -27,6 +29,9 @@ export default {
     },
     disabled: Boolean,
     round: Boolean,
+    plain: Boolean,
+    dashed: Boolean,
+    circle: Boolean,
     loading: Boolean
   },
   computed: {
@@ -40,6 +45,9 @@ export default {
         `i-button--${this.size}`,
         {
           'i-button--round': this.round,
+          'i-button--plain': this.plain && this.type !== 'default',
+          'i-button--dashed': this.dashed && this.type !== 'default',
+          'i-button--circle': this.circle,
           'i-button--loading': this.loading
         }
       ]
