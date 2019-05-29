@@ -14,7 +14,7 @@ module.exports = {
     vue$: 'vue/dist/vue.esm.js',
     src: path.resolve(__dirname, '../src'),
     examples: path.resolve(__dirname, '../examples'),
-    docs: path.resolve(__dirname, '../examples/docs'),
+    docs: path.resolve(__dirname, '../docs'),
     packages: path.resolve(__dirname, '../packages'),
     'unique-ui': path.resolve(__dirname, '../')
   },

@@ -6,7 +6,7 @@ export default [
         name: '更新记录',
         routePath: '/change-log',
         hideNavBar: true,
-        doc: () => import('docs/CHANGELOG'),
+        doc: () => import('../CHANGELOG'),
         demo: () => import('./pages/demo-home')
       },
       {

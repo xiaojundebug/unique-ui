@@ -71,7 +71,7 @@
 | circle | 是否为圆形按钮 | `Boolean` | `false` |
 | round | 是否为圆角按钮 | `Boolean` | `false` |
 | disabled | 是否禁用 | `Boolean` | `false` |
-| loading | 是否为loading状态 | `Boolean` | `false` |
+| loading | 是否为 loading 状态 | `Boolean` | `false` |
 | size | 尺寸，可选值为 `normal` `large` `small` `mini` | `String` | `normal` |
 
 #### Events

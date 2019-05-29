@@ -8,7 +8,7 @@ read -p "Are you sure you want to release a new version? (y/n)" -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-  standard-version -i examples/docs/CHANGELOG.md
+  standard-version
 
   git push --follow-tags origin master
   git checkout dev

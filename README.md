@@ -7,6 +7,7 @@
 <p align="center">
     <img alt="npm" src="https://img.shields.io/npm/v/unique-ui.svg?color=%23f86f74">
     <img alt="stars" src="https://img.shields.io/github/stars/xiaojun1994/unique-ui.svg?color=%2336be52">
+    <img alt="license" src="https://img.shields.io/npm/l/unique-ui.svg">
     <img alt="contributors" src="https://img.shields.io/github/contributors/xiaojun1994/unique-ui.svg?color=%23409eff">
 </p>
 
