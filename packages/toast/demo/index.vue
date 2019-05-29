@@ -1,11 +1,11 @@
 <template>
   <div class="demo-toast">
-    <demo-block title="简单用法">
+    <demo-block title="常规样式">
       <div class="wrapper">
-        <i-button @click="$toast('hello~')">简单用法</i-button>
+        <i-button @click="$toast('hello~')">常规样式</i-button>
       </div>
     </demo-block>
-    <demo-block title="不同类型">
+    <demo-block title="其它样式">
       <div class="wrapper">
         <i-button @click="$toast.loading('Loading...', { duration: 3000 })">loading</i-button>
         <i-button @click="$toast.success('成功')">success</i-button>

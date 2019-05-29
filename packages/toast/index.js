@@ -1,7 +1,8 @@
+import Vue from 'vue'
 import Component from './src'
 
+const Toast = Vue.extend(Component)
 let vm = null
-let Toast = null
 let timer = null
 
 function clear() {
@@ -38,13 +39,16 @@ function handler(msg, opts = {}) {
   }
 }
 
+Component.toast = (msg, opts = {}) => handler(msg, { type: 'normal', ...opts, overlay: false })
+Component.loading = (msg, opts = {}) => handler(msg, { duration: 0, ...opts, type: 'loading' })
+Component.success = (msg, opts = {}) => handler(msg, { ...opts, type: 'success' })
+Component.fail = (msg, opts = {}) => handler(msg, { ...opts, type: 'fail' })
+
 Component.install = function(Vue) {
-  Toast = Vue.extend(Component)
-  Vue.prototype.$toast = (msg, opts = {}) =>
-    handler(msg, { type: 'normal', ...opts, overlay: false })
-  Vue.prototype.$toast.loading = (msg, opts = {}) => handler(msg, { duration: 0, ...opts, type: 'loading' })
-  Vue.prototype.$toast.success = (msg, opts = {}) => handler(msg, { ...opts, type: 'success' })
-  Vue.prototype.$toast.fail = (msg, opts = {}) => handler(msg, { ...opts, type: 'fail' })
+  Vue.prototype.$toast = this.toast
+  Vue.prototype.$toast.loading = this.loading
+  Vue.prototype.$toast.success = this.success
+  Vue.prototype.$toast.fail = this.fail
 
   Vue.prototype.$toast.close = clear
 

@@ -1,6 +1,6 @@
 <template>
   <div class="demo-modal">
-    <demo-block title="js调用">
+    <demo-block title="不同风格">
       <div class="wrapper">
         <i-button @click="$modal.alert('Are you ok?', { title: '👽' })">alert</i-button>
         <i-button @click="$modal.confirm('大郎，起来喝药了', { title: '提示' })">confirm</i-button>

@@ -34,6 +34,7 @@ router.beforeEach((to, from, next) => {
 router.afterEach((to, from) => {
   Vue.prototype.$Progress.finish()
   if (!router.currentRoute.redirectedFrom) {
+    window.scrollTo(0, 0)
     Vue.nextTick(window.syncPath)
   }
 })

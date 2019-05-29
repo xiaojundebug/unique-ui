@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* Button 组件新增 plain、dashed、circle属性，调整默认按钮样式 ([40a88ba](https://github.com/xiaojun1994/unique-ui/commit/40a88ba))
+* Button 组件新增 plain、dashed、circle 属性，调整默认按钮样式 ([40a88ba](https://github.com/xiaojun1994/unique-ui/commit/40a88ba))
 
 
 

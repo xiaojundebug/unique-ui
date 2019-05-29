@@ -1,10 +1,36 @@
 ## Toast 消息提示
 
-> 推荐用`Vue.use`方式来使用本组件，以后便可以在每个Vue实例上直接通过`this.$toast`方式使用，第一个参数代表消息内容，第二个参数传入一个options配置对象，仅支持单例模式
+#### 简单使用
 
-#### 使用方法
+_第一个参数代表消息内容，第二个参数传入一个 options 配置对象，仅支持单例模式_
 
 ```javascript
+import { Toast } from 'unique-ui'
+
+/* 普通提示 */
+Toast.toast('hello~')
+
+/* 加载提示 */
+Toast.toast('Loading...', { type: 'loading', duration: 3000 })
+Toast.loading('Loading...', { duration: 3000 })
+
+/* 成功提示 */
+Toast.toast('成功', { type: 'success' })
+Toast.success('成功')
+
+/* 失败提示 */
+Toast.toast('失败', { type: 'fail' })
+Toast.fail('失败')
+```
+
+#### 全局使用
+
+> 推荐用`Vue.use`方式来使用本组件，以后便可以在每个Vue实例上直接通过`this.$toast`方式使用
+
+```javascript
+import { Toast } from 'unique-ui'
+Vue.use(Toast)
+
 /* 普通提示 */
 this.$toast('hello~')
 

@@ -39,10 +39,11 @@
 
 <script>
 import IPopup from 'unique-ui/packages/popup'
+import ISpinner from 'unique-ui/packages/spinner'
 
 export default {
   name: 'IToast',
-  components: { IPopup },
+  components: { IPopup, ISpinner },
   model: {
     prop: 'show',
     event: 'toggle'

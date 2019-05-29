@@ -80,16 +80,10 @@ export {
   Actionsheet
 }
 
-const uninstallComponents = ['Toast', 'Modal']
-
 const install = function(Vue) {
   components.forEach(component => {
-    if (!uninstallComponents.includes(component)) {
-      Vue.component(component.name, component)
-    }
+    Vue.use(component)
   })
-  Vue.use(Toast)
-  Vue.use(Modal)
 }
 
 if (typeof window !== 'undefined' && window.Vue) {

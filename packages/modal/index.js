@@ -1,7 +1,8 @@
+import Vue from 'vue'
 import Component from './src'
 
+const Modal = Vue.extend(Component)
 let vm = null
-let Modal = null
 
 function clear() {
   try {
@@ -53,11 +54,16 @@ function handler(msg, opts = {}) {
   })
 }
 
+Component.modal = (msg, opts = {}) => handler(msg, { type: 'alert', ...opts })
+Component.alert = (msg, opts = {}) => handler(msg, { ...opts, type: 'alert' })
+Component.confirm = (msg, opts = {}) => handler(msg, { ...opts, type: 'confirm' })
+
 Component.install = function(Vue) {
-  Modal = Vue.extend(Component)
-  Vue.prototype.$modal = (msg, opts = {}) => handler(msg, { type: 'alert', ...opts })
-  Vue.prototype.$modal.alert = (msg, opts = {}) => handler(msg, { ...opts, type: 'alert' })
-  Vue.prototype.$modal.confirm = (msg, opts = {}) => handler(msg, { ...opts, type: 'confirm' })
+  Vue.prototype.$modal = this.modal
+  Vue.prototype.$modal.alert = this.alert
+  Vue.prototype.$modal.confirm = this.confirm
+
+  Vue.component(Component.name, Component)
 }
 
 export default Component

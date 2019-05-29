@@ -6,10 +6,6 @@
   </main>
 </template>
 
-<script>
-export default {}
-</script>
-
 <style lang="scss" scoped>
 .doc-main {
   min-width: 1500px;
