@@ -78,6 +78,12 @@ export default [
         demo: () => import('packages/sticky/demo')
       },
       {
+        name: 'Tab 标签页',
+        routePath: '/tab',
+        doc: () => import('docs/tab'),
+        demo: () => import('packages/tab/demo')
+      },
+      {
         name: 'Tabbar 标签栏',
         routePath: '/tab-bar',
         doc: () => import('docs/tabbar'),

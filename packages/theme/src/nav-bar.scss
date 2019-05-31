@@ -32,10 +32,9 @@
   }
   &__title {
     max-width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: $nav-bar-height;
+    line-height: $nav-bar-height;
+    text-align: center;
     margin: 0 auto;
     font-size: 16px;
     color: $color-dark;

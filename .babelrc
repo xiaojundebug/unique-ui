@@ -6,6 +6,12 @@
         "loose": true,
         "modules": false
       }
+    ],
+    [
+      "@vue/babel-preset-jsx",
+      {
+        "functional": false
+      }
     ]
   ],
   "plugins": [
