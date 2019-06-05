@@ -4,7 +4,7 @@ import TabTitle from './title'
 const raf = require('raf')
 
 export default {
-  name: 'ITab',
+  name: 'ITabs',
   model: {
     prop: 'value',
     event: 'change'

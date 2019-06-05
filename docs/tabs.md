@@ -5,21 +5,21 @@
 #### 简单用法
 
 ```html
-<i-tab v-model="active" @change="(index) => { this.$toast('Current: ' + index) }">
+<i-tabs v-model="active" @change="(index) => { this.$toast('Current: ' + index) }">
   <i-tab-pane label="Vue">Vue</i-tab-pane>
   <i-tab-pane label="React">React</i-tab-pane>
   <i-tab-pane label="Angular">Angular</i-tab-pane>
-</i-tab>
+</i-tabs>
 ```
 
 #### 样式风格
 
 ```html
-<i-tab v-model="active" type="card" color="#f86f74">
+<i-tabs v-model="active" type="card" color="#f86f74">
   <i-tab-pane label="Vue">Vue</i-tab-pane>
   <i-tab-pane label="React">React</i-tab-pane>
   <i-tab-pane label="Angular">Angular</i-tab-pane>
-</i-tab>
+</i-tabs>
 ```
 
 #### 横向滚动
@@ -27,7 +27,7 @@
 超过 4 个后会开启横向滚动
 
 ```html
-<i-tab v-model="active" color="#88dfb9" active-color="#88dfb9" inactive-color="#999" animated>
+<i-tabs v-model="active" color="#88dfb9" active-color="#88dfb9" inactive-color="#999" animated>
   <i-tab-pane label="洗护">洗护</i-tab-pane>
   <i-tab-pane label="生鲜">生鲜</i-tab-pane>
   <i-tab-pane label="男装">男装</i-tab-pane>
@@ -35,13 +35,13 @@
   <i-tab-pane label="手机">手机</i-tab-pane>
   <i-tab-pane label="零食">零食</i-tab-pane>
   <i-tab-pane label="果饮">果饮</i-tab-pane>
-</i-tab>
+</i-tabs>
 ```
 
 #### 自定义标签
 
 ```html
-<i-tab v-model="active" color="#ffb572" active-color="#ffb572">
+<i-tabs v-model="active" color="#ffb572" active-color="#ffb572">
   <i-tab-pane>
     <span slot="label"><i class="fa fa-fw fa-tag"></i>&nbsp;label1</span>
     label1
@@ -50,7 +50,7 @@
     <span slot="label"><i class="fa fa-fw fa-tag"></i>&nbsp;label2</span>
     label2
   </i-tab-pane>
-</i-tab>
+</i-tabs>
 ```
 
 #### Tabs Props

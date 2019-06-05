@@ -47,7 +47,7 @@ export default {
     }
   },
   created() {
-    this.findParent('ITab')
+    this.findParent('ITabs')
   },
   mounted() {},
   methods: {}

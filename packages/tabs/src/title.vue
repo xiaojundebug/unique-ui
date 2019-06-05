@@ -18,7 +18,7 @@ export default {
     active: Boolean
   },
   created() {
-    this.findParent('ITab')
+    this.findParent('ITabs')
   },
   methods: {
     getTitleStyle() {
