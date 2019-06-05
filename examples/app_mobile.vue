@@ -1,18 +1,50 @@
 <template>
   <div id="app">
     <vue-progress-bar></vue-progress-bar>
-    <i-nav-bar v-show="showNavBar" fixed :title="title" left-arrow @click-left="goBack" @click-right="$router.push('/')">
+    <i-nav-bar
+      v-show="showNavBar"
+      fixed
+      :title="title"
+      left-arrow
+      @click-left="goBack"
+      @click-right="$router.push('/')"
+    >
       <i class="fa fa-fw fa-home" style="fontSize: 18px; marginRight: 10px" slot="right"></i>
     </i-nav-bar>
     <router-view></router-view>
+
+    <template v-if="!isMobile">
+      <i-button
+        @click="showQRCode"
+        type="info"
+        circle
+        style="position:fixed;right:20px;bottom:20px;"
+      >
+        <i-icon name="qrcode" size="23px"/>
+      </i-button>
+      <i-modal v-model="show" close-on-click-overlay confirm-text="CLOSE" style="width:200px">
+        <img
+          :src="QRCodeDataURL"
+          alt="qrcode"
+          style="display:block;width:100%"
+        >
+      </i-modal>
+    </template>
   </div>
 </template>
 
 <script>
+import { isMobile } from './utils'
+import QRCode from 'qrcode'
+
 export default {
   name: 'App',
   data() {
-    return {}
+    return {
+      isMobile,
+      show: false,
+      QRCodeDataURL: ''
+    }
   },
   computed: {
     title() {
@@ -25,6 +57,12 @@ export default {
   methods: {
     goBack() {
       this.$router.go(-1)
+    },
+    showQRCode() {
+      QRCode.toDataURL(location.href, { width: 200 }).then(url => {
+        this.QRCodeDataURL = url
+      })
+      this.show = true
     }
   }
 }

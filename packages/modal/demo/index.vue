@@ -17,7 +17,7 @@
       </div>
     </demo-block>
     <i-modal v-model="show" close-on-click-overlay confirm-text="CLOSE" transition-name="modal" style="width:66%">
-      <img src="https://xiaojun1994.top/images/avatar.jpg" alt="avatar" style="display:block;width:100%">
+      <img src="https://avatars0.githubusercontent.com/u/24448924" alt="avatar" style="display:block;width:100%">
     </i-modal>
   </div>
 </template>
