@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.7.0](https://github.com/xiaojun1994/unique-ui/compare/v0.6.0...v0.7.0) (2019-06-05)
+
+
+### Features
+
+* Modal、Toast 不全局引入也能调用了 ([e711710](https://github.com/xiaojun1994/unique-ui/commit/e711710))
+* 文档 demo 新增扫码预览功能 ([ea8f27c](https://github.com/xiaojun1994/unique-ui/commit/ea8f27c))
+* 新增 Tabs 组件 ([7b35893](https://github.com/xiaojun1994/unique-ui/commit/7b35893))
+
+
+
 ## [0.6.0](https://github.com/xiaojun1994/unique-ui/compare/v0.5.0...v0.6.0) (2019-05-28)
 
 
