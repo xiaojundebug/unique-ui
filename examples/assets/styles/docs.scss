@@ -41,11 +41,7 @@
   padding: 2px 7px;
   border-radius: 2px;
   color: #e96900;
-  background-color: #f8f8f8;
-}
-
-.doc-container br + code {
-  margin-left: 0;
+  background-color: #f1f4f8;
 }
 
 .doc-container pre.hljs {
@@ -82,6 +78,7 @@
 .doc-container table td {
   padding: 10px;
   border-bottom: 1px solid #f1f4f8;
+  line-height: 1.8;
 }
 
 .doc-container a {

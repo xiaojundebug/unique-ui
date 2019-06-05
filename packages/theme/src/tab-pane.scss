@@ -1,0 +1,15 @@
+.i-tab {
+  &__panel {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  &--animated {
+    .i-tab__content {
+      display: flex;
+    }
+    .i-tab__panel {
+      flex-shrink: 0;
+    }
+  }
+}

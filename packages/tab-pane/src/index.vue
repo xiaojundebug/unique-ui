@@ -3,7 +3,9 @@
     :class="classList"
     :style="style"
   >
-    <slot />
+    <template v-if="shouldRender">
+      <slot />
+    </template>
   </div>
 </template>
 
@@ -11,27 +13,37 @@
 import { findParent } from 'unique-ui/packages/mixins'
 
 export default {
-  name: 'ITabItem',
+  name: 'ITabPane',
   mixins: [findParent],
   props: {
     label: String
   },
   data() {
     return {
-      value: null
+      index: null,
+      inited: false
     }
   },
   computed: {
     classList() {
       return ['i-tab__panel', { 'i-tab__panel--active': this.active }]
     },
-    active() {
-      return this.parent.value === this.value
-    },
     style() {
+      if (this.parent.animated) return
       return {
-        display: this.parent.value === this.value ? 'block' : 'none'
+        display: this.active ? 'block' : 'none'
       }
+    },
+    active() {
+      return this.parent.value === this.index
+    },
+    shouldRender() {
+      return this.inited
+    }
+  },
+  watch: {
+    'parent.value'() {
+      this.inited = this.inited || this.active
     }
   },
   created() {

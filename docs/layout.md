@@ -93,7 +93,7 @@
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|
 | gutter | 列元素之间的间距（单位为px） | `String | Number` | - |
-| justify | 主轴对齐方式，可选值为 `start` `center` `end`<br>`space-around` `space-between` | `String` | `start` |
+| justify | 主轴对齐方式，可选值为`start` `center` `end`<br>`space-around` `space-between` | `String` | `start` |
 | align | 交叉轴对齐方式，可选值为 `top` `center` `bottom` | `String` | `top` |
 
 #### Col Props

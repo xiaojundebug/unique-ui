@@ -40,7 +40,7 @@
 
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|
-| value | `true`打开，`false`关闭 | `String` | `false` |
+| value | 为`true`代表打开，为`false`代表关闭 | `Boolean` | `false` |
 | disabled | 是否为禁用状态 | `Boolean` | `false` |
 | loading | 是否为加载状态 | `Boolean` | `false` |
 | active-color | 打开时的背景色 | `String` | 主题色 |

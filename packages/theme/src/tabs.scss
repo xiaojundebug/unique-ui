@@ -1,0 +1,101 @@
+@import './common/var';
+
+.i-tab {
+  position: relative;
+  overflow: hidden;
+  &--line {
+    padding-top: $tab-height-line;
+    background-color: #fff;
+    .i-tab__wrap {
+      height: $tab-height_line;
+    }
+    .i-tab__nav {
+      box-sizing: content-box;
+      height: 100%;
+      padding-bottom: 15px;
+    }
+    .i-tab__title {
+      height: 100%;
+      color: #999;
+      & > span {
+        line-height: $tab-height_line;
+      }
+      &--active {
+        color: #333;
+      }
+    }
+  }
+  &--card {
+    padding-top: $tab-height-card;
+    .i-tab__wrap {
+      height: $tab-height_card;
+      overflow: hidden;
+    }
+    .i-tab__nav {
+      box-sizing: border-box;
+      height: 100%;
+      margin: 0 15px;
+      border: 1px solid $info-color;
+      border-radius: 2px;
+      background-color: #fff;
+    }
+    .i-tab__title {
+      height: 100%;
+      color: $info-color;
+      & > span {
+        line-height: $tab-height_card - 2px;
+      }
+      &--active {
+        background-color: $info-color;
+        color: #fff;
+      }
+      &:not(:last-child) {
+        border-right: 1px solid $info-color;
+      }
+    }
+  }
+
+  &__wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+  }
+  &__nav {
+    position: relative;
+    display: flex;
+    user-select: none;
+  }
+  &__title {
+    flex: 1;
+    position: relative;
+    box-sizing: border-box;
+    padding: 0 5px;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    & > span {
+      display: block;
+    }
+  }
+  &__track {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    z-index: 1;
+    height: 3px;
+    background-color: $info-color;
+  }
+  &--scrollable {
+    .i-tab__nav {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .i-tab__title {
+      flex: 0 0 22%;
+    }
+  }
+}

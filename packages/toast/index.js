@@ -22,7 +22,7 @@ function handler(msg, opts = {}) {
 
   const { type, duration = 2500, overlay } = opts
 
-  vm.text = msg // 设置弹窗内容
+  vm.text = msg + '' // 设置弹窗内容
   vm.type = type // 设置弹窗类型
   vm.overlay = overlay
 

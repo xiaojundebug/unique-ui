@@ -19,10 +19,10 @@ import SlideItem from 'packages/slide-item'
 import Spinner from 'packages/spinner'
 import Sticky from 'packages/sticky'
 import Switch from 'packages/switch'
-import Tab from 'packages/tab'
 import Tabbar from 'packages/tabbar'
 import TabbarItem from 'packages/tabbar-item'
-import TabItem from 'packages/tab-item'
+import TabPane from 'packages/tab-pane'
+import Tabs from 'packages/tabs'
 import Tag from 'packages/tag'
 import Toast from 'packages/toast'
 
@@ -48,10 +48,10 @@ const components = [
   Spinner,
   Sticky,
   Switch,
-  Tab,
   Tabbar,
   TabbarItem,
-  TabItem,
+  TabPane,
+  Tabs,
   Tag,
   Toast
 ]
@@ -78,10 +78,10 @@ export {
   Spinner,
   Sticky,
   Switch,
-  Tab,
   Tabbar,
   TabbarItem,
-  TabItem,
+  TabPane,
+  Tabs,
   Tag,
   Toast
 }
