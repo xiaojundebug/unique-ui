@@ -1,6 +1,6 @@
 {
   "name": "unique-ui",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "A mobile component library for Vue2.x",
   "main": "lib/index.js",
   "license": "MIT",
