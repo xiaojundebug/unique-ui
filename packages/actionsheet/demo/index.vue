@@ -1,23 +1,17 @@
 <template>
   <div class="demo-actionsheet">
     <demo-block title="简单用法">
-      <div class="wrapper">
-        <i-button @click="show1 = true">简单用法</i-button>
-      </div>
+      <i-button @click="show1 = true">简单用法</i-button>
     </demo-block>
     <demo-block title="显示取消按钮">
-      <div class="wrapper">
-        <i-button @click="show2 = true">显示取消按钮</i-button>
-      </div>
+      <i-button @click="show2 = true">显示取消按钮</i-button>
     </demo-block>
     <demo-block title="自定义样式">
-      <div class="wrapper">
-        <i-button @click="show3 = true">自定义样式</i-button>
-      </div>
+      <i-button @click="show3 = true">自定义样式</i-button>
     </demo-block>
     <i-actionsheet v-model="show1" :actions="actions1" @select="onSelect" close-on-click-overlay></i-actionsheet>
-    <i-actionsheet v-model="show2" :actions="actions2" cancel-text="取消" ></i-actionsheet>
-    <i-actionsheet v-model="show3" :actions="actions3" cancel-text="关闭" >
+    <i-actionsheet v-model="show2" :actions="actions2" cancel-text="取消"></i-actionsheet>
+    <i-actionsheet v-model="show3" :actions="actions3" cancel-text="关闭">
       <template slot="header">
         <span style="font-size:16px;margin:15px 0">确定吗？</span>
         <span style="font-size:13px;margin-bottom:15px;color:#999">删除之后就无法取消了哦</span>
@@ -46,13 +40,10 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../../theme/src/common/var';
 
 .demo-actionsheet {
-  .wrapper {
-    padding: 0 1em;
-  }
   .success {
     color: #36be52;
   }

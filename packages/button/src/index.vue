@@ -2,6 +2,7 @@
   <button
     :disabled="isDisable"
     :class="classList"
+    :style="buttonStyle"
     @click="cb"
   >
     <i-spinner
@@ -9,7 +10,10 @@
       :color="spinnerColor"
       :size="spinnerSize"
     />
-    <span class="i-button__text">
+    <span
+      class="i-button__text"
+      :style="textStyle"
+    >
       <slot />
     </span>
   </button>
@@ -32,7 +36,9 @@ export default {
     plain: Boolean,
     dashed: Boolean,
     circle: Boolean,
-    loading: Boolean
+    loading: Boolean,
+    color: String,
+    textColor: String
   },
   computed: {
     isDisable() {
@@ -45,18 +51,41 @@ export default {
         `i-button--${this.size}`,
         {
           'i-button--round': this.round,
-          'i-button--plain': this.plain && this.type !== 'default',
-          'i-button--dashed': this.dashed && this.type !== 'default',
+          'i-button--plain': this.plain,
+          'i-button--dashed': this.dashed,
           'i-button--circle': this.circle,
           'i-button--loading': this.loading
         }
       ]
     },
+    buttonStyle() {
+      const style = {}
+      const { color } = this
+
+      color && (style.color = color)
+
+      return style
+    },
+    textStyle() {
+      const { color, textColor, plain, dashed } = this
+
+      if (!color && !textColor) return
+
+      const style = {}
+
+      if (plain || dashed) {
+        style.color = textColor || color
+      } else {
+        style.color = textColor || '#fff'
+      }
+
+      return style
+    },
     spinnerColor() {
       return this.type === 'default' ? '#000' : '#fff'
     },
     spinnerSize() {
-      return { normal: '17px', large: '20px', small: '13px', mini: '10px' }[this.size]
+      return { normal: '18px', large: '20px', small: '13px', mini: '10px' }[this.size]
     }
   },
   methods: {

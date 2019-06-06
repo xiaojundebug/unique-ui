@@ -1,24 +1,16 @@
 <template>
   <div class="demo-switch">
-    <demo-block title="简单用法">
-      <div class="wrapper">
-        <i-switch v-model="value1"></i-switch>
-      </div>
+    <demo-block title="简单用法" padded>
+      <i-switch v-model="value1"></i-switch>
     </demo-block>
-    <demo-block title="禁用状态">
-      <div class="wrapper">
-        <i-switch v-model="value2" disabled></i-switch>
-      </div>
+    <demo-block title="禁用状态" padded>
+      <i-switch v-model="value2" disabled></i-switch>
     </demo-block>
-    <demo-block title="加载状态">
-      <div class="wrapper">
-        <i-switch v-model="value3" loading></i-switch>
-      </div>
+    <demo-block title="加载状态" padded>
+      <i-switch v-model="value3" loading></i-switch>
     </demo-block>
-    <demo-block title="自定义颜色">
-      <div class="wrapper">
-        <i-switch v-model="value4" active-color="#409eff" inactive-color="#f86f74"></i-switch>
-      </div>
+    <demo-block title="自定义颜色" padded>
+      <i-switch v-model="value4" active-color="#409eff" inactive-color="#f86f74"></i-switch>
     </demo-block>
     <demo-block title="搭配 Cell 使用">
       <i-cell-group>
@@ -43,11 +35,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.demo-switch {
-  .wrapper {
-    padding: 0 1em;
-  }
-}
-</style>

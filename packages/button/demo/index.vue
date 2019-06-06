@@ -1,71 +1,55 @@
 <template>
   <div class="demo-button">
     <demo-block title="按钮类型">
-      <div class="demo-button__row">
-        <i-button type="default">默认按钮</i-button>
-        <i-button type="primary">主要按钮</i-button>
-        <i-button type="info">信息按钮</i-button>
-        <i-button type="danger">危险按钮</i-button>
-        <i-button type="warning">警告按钮</i-button>
-      </div>
+      <i-button type="default">默认按钮</i-button>
+      <i-button type="primary">主要按钮</i-button>
+      <i-button type="info">信息按钮</i-button>
+      <i-button type="danger">危险按钮</i-button>
+      <i-button type="warning">警告按钮</i-button>
     </demo-block>
     <demo-block title="空心按钮">
-      <div class="demo-button__row">
-        <i-button type="info" plain>空心按钮</i-button>
-        <i-button type="danger" plain>空心按钮</i-button>
-      </div>
+      <i-button type="primary" plain>空心按钮</i-button>
+      <i-button type="danger" plain>空心按钮</i-button>
     </demo-block>
     <demo-block title="虚线按钮">
-      <div class="demo-button__row">
-        <i-button type="info" dashed>虚线按钮</i-button>
-        <i-button type="danger" dashed>虚线按钮</i-button>
-      </div>
+      <i-button type="primary" dashed>虚线按钮</i-button>
+      <i-button type="danger" dashed>虚线按钮</i-button>
     </demo-block>
     <demo-block title="圆形按钮">
-      <div class="demo-button__row">
-        <i-button type="default" circle><i-icon name="search"/></i-button>
-        <i-button type="info" circle plain><i-icon name="search"/></i-button>
-        <i-button type="danger" circle dashed><i-icon name="search"/></i-button>
-      </div>
+      <i-button type="primary" circle><i-icon name="search" /></i-button>
+      <i-button type="danger" circle><i-icon name="search" /></i-button>
     </demo-block>
     <demo-block title="圆角按钮">
-      <div class="demo-button__row">
-        <i-button type="default" round>圆角按钮</i-button>
-      </div>
+      <i-button type="primary" round>圆角按钮</i-button>
+      <i-button type="danger" round>圆角按钮</i-button>
     </demo-block>
-    <demo-block title="禁用状态">
-      <div class="demo-button__row">
-        <i-button type="danger" disabled>禁用状态</i-button>
-      </div>
+    <demo-block title="按钮状态">
+      <i-button type="primary" disabled>禁用状态</i-button>
+      <i-button type="danger" loading>加载状态</i-button>
     </demo-block>
-    <demo-block title="Loading状态">
-      <div class="demo-button__row">
-        <i-button type="info" loading>提交</i-button>
-      </div>
+    <demo-block title="自定义颜色">
+      <i-button color="steelblue">自定义颜色</i-button>
+      <i-button color="whitesmoke" text-color="rosybrown" round>自定义颜色</i-button>
+      <i-button color="thistle" dashed circle><i-icon name="heart-o" /></i-button>
     </demo-block>
     <demo-block title="按钮尺寸">
-      <div class="demo-button__row">
+      <section style="padding:0 14px">
         <i-button type="default" size="large">大号按钮</i-button>
-      </div>
-      <div class="demo-button__row">
-        <i-button type="default" size="normal">正常按钮</i-button>
-        <i-button type="default" size="small">小型按钮</i-button>
-        <i-button type="default" size="mini">迷你按钮</i-button>
-      </div>
+      </section>
+      <i-button type="default" size="normal">正常按钮</i-button>
+      <i-button type="default" size="small">小型按钮</i-button>
+      <i-button type="default" size="mini">迷你按钮</i-button>
     </demo-block>
+    <br>
+    <br>
+    <br>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .demo-button {
-  &__row {
-    padding: 0 1em 1em 1em;
-    .i-button {
-      margin-bottom: 10px;
-      &:not(:last-child) {
-        margin-right: 10px;
-      }
-    }
+  .i-button {
+    margin-bottom: 10px;
   }
 }
 </style>

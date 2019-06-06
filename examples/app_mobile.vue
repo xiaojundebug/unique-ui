@@ -20,7 +20,7 @@
         @click="showQRCode"
         type="default"
         circle
-        style="position:fixed;right:20px;bottom:20px;box-shadow:2px 2px 4px rgba(0,0,0,0.3)"
+        style="position:fixed;right:20px;bottom:20px;box-shadow:2px 2px 4px rgba(0,0,0,0.15)"
       >
         <i-icon name="qrcode" size="23px"/>
       </i-button>
@@ -93,6 +93,10 @@ body {
 //   transition: opacity 80ms;
 //   pointer-events: none;
 // }
+
+.i-button:not(.i-button--large) {
+  margin-left: 1rem !important;
+}
 
 ::-webkit-scrollbar {
   width: 0;

@@ -41,7 +41,12 @@ module.exports = {
     },
     {
       test: /\.vue$/,
-      loader: 'vue-loader'
+      loader: 'vue-loader',
+      options: {
+        compilerOptions: {
+          preserveWhitespace: false
+        }
+      }
     },
     {
       test: /\.css$/,

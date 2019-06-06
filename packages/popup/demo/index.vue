@@ -1,18 +1,14 @@
 <template>
   <div class="demo-pupup">
     <demo-block title="位置">
-      <div class="wrapper">
-        <i-button @click="show1 = true">中</i-button>
-        <i-button @click="show2 = true">上</i-button>
-        <i-button @click="show3 = true">右</i-button>
-        <i-button @click="show4 = true">下</i-button>
-        <i-button @click="show5 = true">左</i-button>
-      </div>
+      <i-button @click="show1 = true">中</i-button>
+      <i-button @click="show2 = true">上</i-button>
+      <i-button @click="show3 = true">右</i-button>
+      <i-button @click="show4 = true">下</i-button>
+      <i-button @click="show5 = true">左</i-button>
     </demo-block>
     <demo-block title="样式设置">
-      <div class="wrapper">
-        <i-button @click="show6 = true">show</i-button>
-      </div>
+      <i-button @click="show6 = true">show</i-button>
     </demo-block>
     <i-popup :show="show1" @click-overlay="show1 = false" position="center">
       <div class="popup-demo-content" style="height:200px">中</div>
@@ -29,7 +25,14 @@
     <i-popup :show="show5" @click-overlay="show5 = false" position="left">
       <div class="popup-demo-content" style="width:70vw">左</div>
     </i-popup>
-    <i-popup :show="show6" @click-overlay="show6 = false" position="center" transition-name="fade" :overlay-opacity="0.85" overlay-color="#fff">
+    <i-popup
+      :show="show6"
+      @click-overlay="show6 = false"
+      position="center"
+      transition-name="fade"
+      :overlay-opacity="0.85"
+      overlay-color="#fff"
+    >
       <div class="popup-demo-content" style="height:200px"></div>
     </i-popup>
   </div>
@@ -52,9 +55,6 @@ export default {
 
 <style lang="scss" scoped>
 .demo-pupup {
-  .wrapper {
-    padding: 0 1em;
-  }
   .popup-demo-content {
     display: flex;
     align-items: center;

@@ -1,5 +1,5 @@
 <template>
-  <div class="demo-tab">
+  <div class="demo-tabs">
     <demo-block title="简单用法">
       <i-tabs v-model="active1" @change="(index) => { this.$toast('Current: ' + index) }">
         <i-tab-pane label="Vue">Vue</i-tab-pane>
@@ -52,11 +52,3 @@ export default {
   }
 }
 </script>
-
-<style lang='scss'>
-.demo-tab {
-  .i-tab__panel {
-    // font-size: 12px;
-  }
-}
-</style>
