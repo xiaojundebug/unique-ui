@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import raf from 'raf'
 import { featureTest, event } from 'unique-ui/packages/utils'
 const nativeSupported = featureTest('position', 'sticky')
 
@@ -33,22 +34,7 @@ export default {
   data() {
     return {
       fixed: false,
-      rafTimer: null,
-      scrollHandler: () => {
-        cancelAnimationFrame(this.rafTimer)
-        this.rafTimer = requestAnimationFrame(() => {
-          const { wrapper } = this.$refs
-          const rect = wrapper.getBoundingClientRect()
-
-          if (!this.fixed && rect.top <= this.top) {
-            wrapper.style.height = rect.height + 'px'
-            this.fixed = true
-          } else if (this.fixed && rect.top > this.top) {
-            wrapper.style.height = 'auto'
-            this.fixed = false
-          }
-        })
-      }
+      rafHandle: null
     }
   },
   computed: {
@@ -75,14 +61,33 @@ export default {
   },
   mounted() {
     if (nativeSupported) return
-    event.on(window, 'scroll', this.scrollHandler, true)
+    this.setListener(true)
   },
   destroyed() {
     if (nativeSupported) return
-    cancelAnimationFrame(this.rafTimer)
-    event.off(window, 'scroll', this.scrollHandler)
+    raf.cancel(this.rafHandle)
+    this.setListener(false)
   },
-  methods: {}
+  methods: {
+    scrollHandler() {
+      raf.cancel(this.rafHandle)
+      this.rafHandle = raf(() => {
+        const { wrapper } = this.$refs
+        const rect = wrapper.getBoundingClientRect()
+
+        if (!this.fixed && rect.top <= this.top) {
+          wrapper.style.height = rect.height + 'px'
+          this.fixed = true
+        } else if (this.fixed && rect.top > this.top) {
+          wrapper.style.height = 'auto'
+          this.fixed = false
+        }
+      })
+    },
+    setListener(bind) {
+      ;(bind ? event.on : event.off)(window, 'scroll', this.scrollHandler, true)
+    }
+  }
 }
 </script>
 
