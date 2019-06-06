@@ -34,9 +34,10 @@ export default {
   },
   data() {
     return {
-      dirty: false,
+      // 用来控制关闭某些场景下的动画
+      shouldShowAnimation: false,
       tabs: [],
-      currTabEl: null
+      trackStyle: {}
     }
   },
   computed: {
@@ -53,45 +54,30 @@ export default {
     wrapClassList() {
       return ['i-tab__wrap', { 'i-1px--t': this.type === 'line', 'i-1px--b': this.type === 'line' }]
     },
-    trackStyle() {
-      const { currTabEl, color, dirty, duration } = this
-
-      if (!currTabEl) return
-
-      const { offsetLeft, offsetWidth } = currTabEl
-
-      return {
-        width: `${offsetWidth / 2}px`,
-        transform: `translateX(${offsetLeft + offsetWidth / 4}px)`,
-        backgroundColor: color,
-        transition: `transform ${dirty ? duration : 0}s, width ${duration}s`
-      }
-    },
     scrollable() {
       return this.tabs.length > 4
     }
   },
   watch: {
     value: {
-      async handler(val, oldVal) {
-        const first = oldVal === undefined
+      handler(val, oldVal) {
+        const firstTime = oldVal === undefined
 
-        if (!first && !this.dirty) this.dirty = true
+        // 初始进来禁止显示动画
+        if (!firstTime && !this.shouldShowAnimation) this.shouldShowAnimation = true
 
-        this.currTabEl = await this.getCurrentTabEl()
-        this.scrollIntoView(first)
+        this.$nextTick(() => {
+          this.calcTrackStyle()
+          this.scrollIntoView(firstTime)
+        })
       },
       immediate: true
+    },
+    tabs() {
+      this.$nextTick(this.calcTrackStyle)
     }
   },
   mounted() {
-    const tabSlots = this.$slots.default.filter(
-      vnode =>
-        vnode.tag &&
-        vnode.componentOptions &&
-        vnode.componentOptions.Ctor.options.name === 'ITabPane'
-    )
-    this.tabs = tabSlots.map(({ componentInstance }) => componentInstance)
     this.setResizeListener(true)
   },
   beforeDestroy() {
@@ -105,32 +91,51 @@ export default {
     },
     // 绑定或解绑 window resize 事件
     setResizeListener(bind) {
-      ;(bind ? event.on : event.off)(window, 'resize', this.calcTrackStyle, true)
+      // card 类型没必要监听 resize 事件
+      if (this.type === 'card') return
+      ;(bind ? event.on : event.off)(window, 'resize', this.handleResizeEvent, true)
+    },
+    handleResizeEvent() {
+      // resize 时禁止显示动画
+      this.shouldShowAnimation = false
+      this.scrollIntoView()
+      this.calcTrackStyle()
     },
     // 获取当前选中 tab 元素
     getCurrentTabEl() {
-      return this.$nextTick().then(() => Promise.resolve(this.$refs['title' + this.value].$el))
+      return this.$refs['title' + this.value].$el
+    },
+    calcTrackStyle() {
+      const { getCurrentTabEl, color, shouldShowAnimation, duration } = this
+      const { offsetLeft, offsetWidth } = getCurrentTabEl()
+
+      this.trackStyle = {
+        width: `${offsetWidth / 2}px`,
+        transform: `translateX(${offsetLeft + offsetWidth / 4}px)`,
+        backgroundColor: color,
+        transition: `transform ${shouldShowAnimation ? duration : 0}s`
+      }
     },
     getContentStyle() {
       if (!this.animated) return
+
       return {
         transform: `translateX(-${100 * this.value}%)`,
         transition: `${this.duration}s`
       }
     },
     // 滚动当前 tab 到可视位置
-    scrollIntoView(immediate) {
+    scrollIntoView() {
       if (!this.scrollable) return
 
-      const { nav } = this.$refs
-
+      const { $refs: { nav }, getCurrentTabEl } = this
       const { scrollLeft, offsetWidth: navWidth } = nav
-      const { offsetLeft, offsetWidth: tabWidth } = this.currTabEl
+      const { offsetLeft, offsetWidth: tabWidth } = getCurrentTabEl()
 
-      this.scrollTo(nav, scrollLeft, offsetLeft - (navWidth - tabWidth) / 2, immediate)
+      this.scrollTo(nav, scrollLeft, offsetLeft - (navWidth - tabWidth) / 2)
     },
-    scrollTo(el, from, to, immediate) {
-      if (immediate) {
+    scrollTo(el, from, to) {
+      if (!this.shouldShowAnimation) {
         el.scrollLeft += to - from
         return
       }

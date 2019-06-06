@@ -32,14 +32,12 @@ export default {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   .demo-header__left {
     width: 30px;
-    cursor: pointer;
     i {
       font-size: 24px;
     }
   }
   .demo-header__right {
     width: 30px;
-    cursor: pointer;
     i {
       font-size: 18px;
     }

@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <vue-progress-bar></vue-progress-bar>
+    <!-- <div class="touch-point" /> -->
+
     <i-nav-bar
       v-show="showNavBar"
       fixed
@@ -16,18 +18,14 @@
     <template v-if="!isMobile">
       <i-button
         @click="showQRCode"
-        type="info"
+        type="default"
         circle
-        style="position:fixed;right:20px;bottom:20px;"
+        style="position:fixed;right:20px;bottom:20px;box-shadow:2px 2px 4px rgba(0,0,0,0.3)"
       >
         <i-icon name="qrcode" size="23px"/>
       </i-button>
-      <i-modal v-model="show" close-on-click-overlay confirm-text="CLOSE" style="width:200px">
-        <img
-          :src="QRCodeDataURL"
-          alt="qrcode"
-          style="display:block;width:100%"
-        >
+      <i-modal v-model="show" close-on-click-overlay confirm-text="CLOSE" style="width:250px">
+        <img :src="QRCodeDataURL" alt="qrcode" style="display:block;width:100%">
       </i-modal>
     </template>
   </div>
@@ -59,7 +57,12 @@ export default {
       this.$router.go(-1)
     },
     showQRCode() {
-      QRCode.toDataURL(location.href, { width: 200 }).then(url => {
+      QRCode.toDataURL(location.href, {
+        width: 250,
+        color: {
+          dark: '#2a6f6d'
+        }
+      }).then(url => {
         this.QRCodeDataURL = url
       })
       this.show = true
@@ -75,7 +78,21 @@ body {
   color: #34495e;
   font-size: 14px;
   -webkit-tap-highlight-color: transparent;
+  cursor: default !important;
+  user-select: none;
 }
+
+// .touch-point {
+//   position: absolute;
+//   z-index: 9999;
+//   width: 25px;
+//   height: 25px;
+//   border-radius: 50%;
+//   background-color: #000;
+//   opacity: 0;
+//   transition: opacity 80ms;
+//   pointer-events: none;
+// }
 
 ::-webkit-scrollbar {
   width: 0;

@@ -1,7 +1,7 @@
 <template>
   <div class="demo-home">
     <h1 class="title"><img src="../assets/images/logo2.png" alt="logo" class="logo"></h1>
-    <p class="desc">移动端 Vue 组件库</p>
+    <p class="desc">一个 Vue2.x 移动端组件库</p>
     <demo-nav v-for="(group, index) in navConfig" :key="index" :data="group" />
   </div>
 </template>

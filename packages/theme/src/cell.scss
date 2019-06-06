@@ -62,7 +62,6 @@
   }
 
   &--clickable {
-    cursor: pointer;
     &:active {
       background-color: $border-color;
     }

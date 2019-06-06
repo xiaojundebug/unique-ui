@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     onSelect(data) {
-      this.$toast(data)
+      this.$toast(data.name)
     }
   }
 }

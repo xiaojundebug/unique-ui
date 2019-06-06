@@ -14,7 +14,6 @@ $height: $switch-height - 2px;
   box-sizing: content-box;
   background-color: #fff;
   transition: background-color 0.3s;
-  cursor: pointer;
   &__node {
     position: absolute;
     width: $height;

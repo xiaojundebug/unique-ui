@@ -12,7 +12,6 @@
 import { findParent } from 'unique-ui/packages/mixins'
 
 export default {
-  name: 'TabTitle',
   mixins: [findParent],
   props: {
     active: Boolean

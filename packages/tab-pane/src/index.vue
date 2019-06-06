@@ -20,7 +20,7 @@ export default {
   },
   data() {
     return {
-      index: null,
+      index: -1,
       inited: false
     }
   },
@@ -49,7 +49,9 @@ export default {
   created() {
     this.findParent('ITabs')
   },
-  mounted() {},
+  mounted() {
+    this.parent.tabs.push(this)
+  },
   methods: {}
 }
 </script>

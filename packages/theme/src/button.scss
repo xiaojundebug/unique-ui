@@ -9,12 +9,10 @@
   border: 1px solid currentColor;
   border-radius: $border-radius;
   background-color: currentColor;
-  cursor: pointer;
 
   &:disabled,
   &--loading {
     opacity: 0.5;
-    cursor: not-allowed;
     &:active::before { opacity: 0; }
   }
 

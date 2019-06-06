@@ -6,7 +6,7 @@ import 'packages/theme/src/index.scss'
 import uniqueUI from 'src'
 import DemoBlock from './components/demo-block.vue'
 import VueProgressBar from 'vue-progressbar'
-import './utils/touch-simulator'
+import { isMobile } from './utils'
 
 Vue.component(DemoBlock.name, DemoBlock)
 
@@ -49,3 +49,35 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
+if (!isMobile) {
+  import('./utils/touch-simulator')
+
+  // const touchPointEl = document.querySelector('.touch-point')
+  // const { style } = touchPointEl
+
+  // function correctPosition(ev) {
+  //   const { clientX, clientY } = ev
+  //   style.top = clientY - touchPointEl.offsetWidth / 2 + 'px'
+  //   style.left = clientX - touchPointEl.offsetWidth / 2 + 'px'
+  // }
+
+  // function onMousedown(ev) {
+  //   style.opacity = '0.3'
+  //   correctPosition(ev)
+  //   window.addEventListener('mousemove', onMousemove, true)
+  // }
+
+  // function onMousemove(ev) {
+  //   style.opacity = '0.3'
+  //   correctPosition(ev)
+  // }
+
+  // function onMouseup(ev) {
+  //   style.opacity = '0'
+  //   window.removeEventListener('mousemove', onMousemove, true)
+  // }
+
+  // window.addEventListener('mousedown', onMousedown, true)
+  // window.addEventListener('mouseup', onMouseup, true)
+}

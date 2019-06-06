@@ -47,7 +47,6 @@ export default {
   margin-bottom: 12px;
   border-radius: 15px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.03);
-  cursor: pointer;
   &.demo-nav--expand .demo-nav__title {
     color: #419aff;
     i {
