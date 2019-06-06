@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.0](https://github.com/xiaojun1994/unique-ui/compare/v0.6.0...v0.8.0) (2019-06-06)
+
+
+### Bug Fixes
+
+* 修复 Tabs 组件 name ([cd50b88](https://github.com/xiaojun1994/unique-ui/commit/cd50b88))
+* 修复 Tabs 组件 在 window resize 时指示条样式错乱问题 ([c528e48](https://github.com/xiaojun1994/unique-ui/commit/c528e48))
+
+
+### Features
+
+* Modal、Toast 不全局引入也能调用了 ([e711710](https://github.com/xiaojun1994/unique-ui/commit/e711710))
+* 文档 demo 新增扫码预览功能 ([ea8f27c](https://github.com/xiaojun1994/unique-ui/commit/ea8f27c))
+* 新增 Tabs 组件 ([7b35893](https://github.com/xiaojun1994/unique-ui/commit/7b35893))
+
+
+### BREAKING CHANGES
+
+* i-tab -> i-tabs
+
+
+
 ## [0.7.0](https://github.com/xiaojun1994/unique-ui/compare/v0.6.0...v0.7.0) (2019-06-05)
 
 
