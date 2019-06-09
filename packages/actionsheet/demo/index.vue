@@ -40,16 +40,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import '../../theme/src/common/var';
-
+<style lang="scss">
 .demo-actionsheet {
-  .success {
-    color: #36be52;
-  }
-  .warning {
-    color: #fda830;
-  }
   .danger {
     color: #f86f74;
   }

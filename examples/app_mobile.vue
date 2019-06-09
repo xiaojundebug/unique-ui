@@ -16,12 +16,7 @@
     <router-view></router-view>
 
     <template v-if="!isMobile">
-      <i-button
-        @click="showQRCode"
-        type="default"
-        circle
-        style="position:fixed;right:20px;bottom:20px;box-shadow:2px 2px 4px rgba(0,0,0,0.15)"
-      >
+      <i-button class="float-button" @click="showQRCode" color="#d6e09e" circle>
         <i-icon name="qrcode" size="23px"/>
       </i-button>
       <i-modal v-model="show" close-on-click-overlay confirm-text="CLOSE" style="width:250px">
@@ -82,6 +77,24 @@ body {
   user-select: none;
 }
 
+#app {
+  .float-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 9;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+    opacity: 0.3;
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .i-button:not(.i-button--large) {
+    margin-left: 1rem !important;
+  }
+}
+
 // .touch-point {
 //   position: absolute;
 //   z-index: 9999;
@@ -93,10 +106,6 @@ body {
 //   transition: opacity 80ms;
 //   pointer-events: none;
 // }
-
-.i-button:not(.i-button--large) {
-  margin-left: 1rem !important;
-}
 
 ::-webkit-scrollbar {
   width: 0;

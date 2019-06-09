@@ -8,13 +8,12 @@ const registerRoutes = isDemo => {
     routes.push({
       path: '/',
       component: () => import('./pages/demo-home'),
-      hideNavBar: true
+      meta: { hideNavBar: true }
     })
   } else {
     routes.push({
       path: '/',
-      component: () => import('../README'),
-      hideNavBar: true
+      component: () => import('../README')
     })
   }
 

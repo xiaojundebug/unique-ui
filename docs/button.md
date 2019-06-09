@@ -75,7 +75,7 @@
 | round | 是否为圆角按钮 | `Boolean` | `false` |
 | disabled | 是否禁用 | `Boolean` | `false` |
 | loading | 是否为 loading 状态 | `Boolean` | `false` |
-| size | 尺寸，可选值为 `normal` `large` `small` `mini` | `String` | `normal` |
+| size | 尺寸，可选值为 `normal` `large`<br />`small` `mini` | `String` | `normal` |
 | color | 按钮颜色 | `String` | `''` |
 | text-color | 按钮字体颜色 | `String` | 1、未设置`color`情况下为`''`<br />2、否则为`color`或`#fff`<br />_取决于`plain` `dashed`_ |
 

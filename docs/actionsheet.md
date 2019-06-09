@@ -78,6 +78,13 @@ export default {
 | disabled | 禁用该项 |
 | className | 设置额外class |
 
+#### Slots
+
+| 名称 | 说明 |
+|------|------|
+| header | 头部区域 |
+| footer | 尾部区域 |
+
 #### Events
 
 | 事件名 | 说明 | 参数 |

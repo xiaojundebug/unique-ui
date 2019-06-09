@@ -21,7 +21,7 @@ utb # 等同于 utb -o .theme
 
 4、引入主题
 
-如果是搭配 [babel-plugin-component](https://github.com/ElementUI/babel-plugin-component) 一起使用，只需要修改 .babelrc 的配置，指定 styleLibraryName 路径为自定义主题相对于 .babelrc 的路径，注意要加 ~
+如果是搭配 [babel-plugin-component](https://github.com/ElementUI/babel-plugin-component) 一起使用，只需要修改 .babelrc 的配置，指定 styleLibraryName 路径为自定义主题相对于 .babelrc 的路径，注意要加`~`
 
 ```javascript
 {

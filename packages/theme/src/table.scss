@@ -1,0 +1,22 @@
+@import './common/var';
+
+.i-table {
+  overflow: auto;
+  font-size: 0;
+  background-color: #fff;
+  &__tr {
+    display: inline-flex;
+    min-width: 100%;
+  }
+  &__th {
+    font-weight: bold;
+  }
+  &__th,
+  &__td {
+    flex-grow: 1;
+    display: inline-block;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+}

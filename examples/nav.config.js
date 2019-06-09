@@ -107,6 +107,12 @@ export default [
         demo: () => import('packages/slide/demo')
       },
       {
+        name: 'Table 表格',
+        routePath: '/table',
+        doc: () => import('docs/table'),
+        demo: () => import('packages/table/demo')
+      },
+      {
         name: 'Tag 标记',
         routePath: '/tag',
         doc: () => import('docs/tag'),

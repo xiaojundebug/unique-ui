@@ -75,7 +75,7 @@ this.$modal.confirm('大郎，起来喝药了', { title: '提示' })
 |------|------|------|------|
 | show | 是否显示 | `Boolean` | `false` |
 | type | 类型，可选值为`alert | confirm` | `String` | `'alert'` |
-| title | 标题 | `String` | `` |
+| title | 标题 | `String` | `''` |
 | confirmText | 确定按钮文字 | `String` | `确认` |
 | cancelText | 取消按钮文字 | `String` | `取消` |
 | closeOnClickOverlay | 点击蒙版时是否关闭弹窗	 | `Boolean` | `false` |

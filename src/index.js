@@ -21,6 +21,7 @@ import Sticky from 'packages/sticky'
 import Switch from 'packages/switch'
 import Tabbar from 'packages/tabbar'
 import TabbarItem from 'packages/tabbar-item'
+import Table from 'packages/table'
 import TabPane from 'packages/tab-pane'
 import Tabs from 'packages/tabs'
 import Tag from 'packages/tag'
@@ -50,6 +51,7 @@ const components = [
   Switch,
   Tabbar,
   TabbarItem,
+  Table,
   TabPane,
   Tabs,
   Tag,
@@ -80,6 +82,7 @@ export {
   Switch,
   Tabbar,
   TabbarItem,
+  Table,
   TabPane,
   Tabs,
   Tag,
