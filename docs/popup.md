@@ -24,7 +24,7 @@
 </i-popup>
 ```
 
-#### 样式设置
+#### 自定义样式
 
 ```html
 <i-popup :show="show" @click-overlay="show = false" position="center" transition-name="fade" :overlay-opacity="0.85" overlay-color="#fff">
@@ -49,11 +49,11 @@
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|
 | show | 是否显示 | `Boolean` | `false` |
-| position | 位置，可选值为`center | top | right | bottom | left` | `String` | `center` |
+| position | 位置，可选值为`center` `top` `right` `bottom` `left` | `String` | `center` |
 | overlay | 是否显示蒙版 | `Boolean` | `true` |
 | overlay-opacity | 蒙版透明度 | `Number` | `0.5` |
 | overlay-color | 蒙版颜色 | `String` | `#000` |
-| transition-name | 同`vue`中`transition`的`name`属性，仅作用于弹层部分 | `String` | 取决于`position` |
+| transition-name | 同 vue 中`transition`的`name`属性 | `String` | 取决于`position` |
 
 #### Events
 

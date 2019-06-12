@@ -7,8 +7,8 @@
       <i-button @click="show4 = true">下</i-button>
       <i-button @click="show5 = true">左</i-button>
     </demo-block>
-    <demo-block title="样式设置">
-      <i-button @click="show6 = true">show</i-button>
+    <demo-block title="自定义样式">
+      <i-button @click="show6 = true">自定义样式</i-button>
     </demo-block>
     <i-popup :show="show1" @click-overlay="show1 = false" position="center">
       <div class="popup-demo-content" style="height:200px">中</div>
@@ -62,7 +62,7 @@ export default {
     width: 100%;
     height: 100%;
     font-size: 46px;
-    background-color: #d6e09e;
+    background-color: #88dfb9;
     color: #fff;
   }
   .fade-enter-active,

@@ -10,7 +10,7 @@ import VueProgressBar from 'vue-progressbar'
 
 Vue.use(VueRouter)
 Vue.use(VueProgressBar, {
-  color: "#ffa683",
+  color: "#ff7e4a",
   transition: {
     speed: '0.2s',
     opacity: '0.6s',

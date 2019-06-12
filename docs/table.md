@@ -64,13 +64,20 @@ export default {
 }
 ```
 
-#### tableColumns
+#### Props
+
+| 参数 | 说明 | 类型 | 默认值 |
+|------|------|------|------|
+| columns | 列配置，详情见下个表格 | `Array` | `[]` |
+| data | 数据 | `Array` | `[]` |
+
+#### columns
 
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|
 | title | 列名 | `String` | `''` |
 | key | 字段名 | `String` | `''` |
-| width | 列宽度，单位px | `Number` | `100` |
+| width | 列宽度，单位 px | `Number` | `100` |
 | align | 内容对齐方式，同 css 中 text-align	 | `String` | `left` |
 | render | 自定义渲染，参数为原始值	 | `Function` | `''` |
 

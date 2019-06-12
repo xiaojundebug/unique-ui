@@ -76,10 +76,10 @@
     background-clip: content-box;
     color: #fff;
     &:nth-child(odd) {
-      background-color: lighten($primary-color, 10%);
+      background-color: #797e91;
     }
     &:nth-child(even) {
-      background-color: lighten($primary-color, 15%);
+      background-color: #9599a8;
     }
   }
 }

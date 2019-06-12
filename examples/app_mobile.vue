@@ -16,7 +16,7 @@
     <router-view></router-view>
 
     <template v-if="!isMobile">
-      <i-button class="float-button" @click="showQRCode" color="#d6e09e" circle>
+      <i-button class="float-button" @click="showQRCode" color="#88dfb9" circle>
         <i-icon name="qrcode" size="23px"/>
       </i-button>
       <i-modal v-model="show" close-on-click-overlay confirm-text="CLOSE" style="width:250px">
@@ -55,7 +55,7 @@ export default {
       QRCode.toDataURL(location.href, {
         width: 250,
         color: {
-          dark: '#2a6f6d'
+          dark: '#197777'
         }
       }).then(url => {
         this.QRCodeDataURL = url

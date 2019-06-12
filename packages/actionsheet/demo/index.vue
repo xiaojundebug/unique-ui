@@ -6,7 +6,7 @@
     <demo-block title="显示取消按钮">
       <i-button @click="show2 = true">显示取消按钮</i-button>
     </demo-block>
-    <demo-block title="自定义样式">
+    <demo-block title="定制样式">
       <i-button @click="show3 = true">自定义样式</i-button>
     </demo-block>
     <i-actionsheet v-model="show1" :actions="actions1" @select="onSelect" close-on-click-overlay></i-actionsheet>

@@ -51,7 +51,7 @@ this.$toast.fail('失败')
 
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|
-| type | 类型，可选值为`normal | loading | success | fail` | `String` | `'normal'` |
+| type | 类型，可选值为`normal` `loading` `success` `fail` | `String` | `'normal'` |
 | duration | 多久自动消失，`0`代表不消失，单位毫秒 | `Number` | 当`type`为`loading`时默认是`0`，其它为`2500` |
 | overlay | 是否显示一个透明度为`0`的蒙版，防止用户点击其它地方，只在`type`不为`normal`时生效 | `Boolean` | `true` |
 

@@ -15,7 +15,7 @@
       close-on-click-overlay
       confirm-text="CLOSE"
       transition-name="modal"
-      style="width:66%"
+      style="width:65%"
     >
       <img
         src="https://avatars0.githubusercontent.com/u/24448924"

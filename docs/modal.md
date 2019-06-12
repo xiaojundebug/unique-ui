@@ -49,7 +49,7 @@ this.$modal.confirm('大郎，起来喝药了', { title: '提示' })
 通过组件使用以深度定制样式
 
 ```html
-<i-modal v-model="show" close-on-click-overlay confirm-text="CLOSE" transition-name="modal" style="width:66%">
+<i-modal v-model="show" close-on-click-overlay confirm-text="CLOSE" transition-name="modal" style="width:65%">
   <img src="https://avatars0.githubusercontent.com/u/24448924" alt="avatar" style="display:block;width:100%">
 </i-modal>
 ```
@@ -74,7 +74,7 @@ this.$modal.confirm('大郎，起来喝药了', { title: '提示' })
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|
 | show | 是否显示 | `Boolean` | `false` |
-| type | 类型，可选值为`alert | confirm` | `String` | `'alert'` |
+| type | 类型，可选值为`alert` `confirm` | `String` | `'alert'` |
 | title | 标题 | `String` | `''` |
 | confirmText | 确定按钮文字 | `String` | `确认` |
 | cancelText | 取消按钮文字 | `String` | `取消` |
