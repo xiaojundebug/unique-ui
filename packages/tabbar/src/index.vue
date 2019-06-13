@@ -19,7 +19,7 @@ export default {
       default: true
     },
     value: String,
-    color: String,
+    inactiveColor: String,
     activeColor: String
   },
   data() {

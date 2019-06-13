@@ -23,7 +23,7 @@ export default {
 #### 自定义颜色
 
 ```html
-<i-tabbar v-model="active" :fixed="false" color="#666" active-color="#ff7e4a">
+<i-tabbar v-model="active" :fixed="false" active-color="#88dfb9" inactive-color="#666">
   <i-tabbar-item icon="shopping-cart" label="购物车" value="/shopping-cart"></i-tabbar-item>
   <i-tabbar-item icon="star" label="收藏" value="/star"></i-tabbar-item>
   <i-tabbar-item icon="share-alt" label="分享" value="/share"></i-tabbar-item>
@@ -45,7 +45,7 @@ export default {
 通过插槽定制内容
 
 ```html
-<i-tabbar v-model="active" :fixed="false" color="#282212" active-color="#f7c635">
+<i-tabbar v-model="active" :fixed="false" active-color="#f7c635" inactive-color="#282212">
   <i-tabbar-item label="购物车" value="/shopping-cart">
     <img slot="icon" slot-scope="props" :src="props.active ? 'https://s2.ax1x.com/2019/05/24/ViztB9.png' : 'https://s2.ax1x.com/2019/05/24/VizN7R.png'">
   </i-tabbar-item>
@@ -73,7 +73,7 @@ export default {
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|------|------|
 | value | 选中某项，传入值为该项`value` | `String` | `''` |
-| color | 未激活文字的颜色 | `String` | `#a9b1b9` |
+| inactive-color | 未激活文字的颜色 | `String` | `#a9b1b9` |
 | active-color | 已激活文字的颜色 | `String` | 主题色 |
 | fixed | 是否固定在底部 | `Boolean` | `true` |
 

@@ -40,7 +40,7 @@ export default {
     },
     style() {
       return {
-        color: this.isActive ? this.$parent.activeColor : this.$parent.color
+        color: this.isActive ? this.$parent.activeColor : this.$parent.inactiveColor
       }
     },
     iconClassName() {

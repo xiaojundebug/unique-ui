@@ -8,14 +8,14 @@
       </i-tabbar>
     </demo-block>
     <demo-block title="自定义颜色">
-      <i-tabbar v-model="active2" :fixed="false" color="#666" active-color="#ff7e4a">
+      <i-tabbar v-model="active2" :fixed="false" active-color="#88dfb9" inactive-color="#666">
         <i-tabbar-item icon="shopping-cart" label="购物车" value="/shopping-cart"></i-tabbar-item>
         <i-tabbar-item icon="star" label="收藏" value="/star"></i-tabbar-item>
         <i-tabbar-item icon="share-alt" label="分享" value="/share"></i-tabbar-item>
       </i-tabbar>
     </demo-block>
     <demo-block title="高级用法">
-      <i-tabbar v-model="active3" :fixed="false" color="#282212" active-color="#f7c635">
+      <i-tabbar v-model="active3" :fixed="false" active-color="#f7c635" inactive-color="#282212">
         <i-tabbar-item label="购物车" value="/shopping-cart">
           <img slot="icon" slot-scope="props" :src="props.active ? 'https://s2.ax1x.com/2019/05/24/ViztB9.png' : 'https://s2.ax1x.com/2019/05/24/VizN7R.png'">
         </i-tabbar-item>

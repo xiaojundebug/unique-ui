@@ -60,22 +60,33 @@ export default [
         demo: () => import('packages/row/demo')
       },
       {
-        name: 'NavBar 导航栏',
-        routePath: '/nav-bar',
-        doc: () => import('docs/nav-bar'),
-        demo: () => import('packages/nav-bar/demo')
-      },
-      {
         name: 'Popup 弹出层',
         routePath: '/popup',
         doc: () => import('docs/popup'),
         demo: () => import('packages/popup/demo')
       },
       {
+        name: 'Spinner 加载动画',
+        routePath: '/spinner',
+        doc: () => import('docs/spinner'),
+        demo: () => import('packages/spinner/demo')
+      },
+      {
         name: 'Sticky 粘性定位',
         routePath: '/sticky',
         doc: () => import('docs/sticky'),
         demo: () => import('packages/sticky/demo')
+      }
+    ]
+  },
+  {
+    groupName: '导航组件',
+    list: [
+      {
+        name: 'NavBar 导航栏',
+        routePath: '/nav-bar',
+        doc: () => import('docs/nav-bar'),
+        demo: () => import('packages/nav-bar/demo')
       },
       {
         name: 'Tabs 标签页',
@@ -163,12 +174,6 @@ export default [
         routePath: '/modal',
         doc: () => import('docs/modal'),
         demo: () => import('packages/modal/demo')
-      },
-      {
-        name: 'Spinner 加载动画',
-        routePath: '/spinner',
-        doc: () => import('docs/spinner'),
-        demo: () => import('packages/spinner/demo')
       },
       {
         name: 'Toast 消息提示',
