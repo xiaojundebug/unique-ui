@@ -76,6 +76,12 @@ export default [
         routePath: '/sticky',
         doc: () => import('docs/sticky'),
         demo: () => import('packages/sticky/demo')
+      },
+      {
+        name: 'Uploader 文件上传',
+        routePath: '/uploader',
+        doc: () => import('docs/uploader'),
+        demo: () => import('packages/uploader/demo')
       }
     ]
   },

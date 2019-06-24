@@ -19,7 +19,7 @@
 #### 日期格式化
 
 * 参数一：Date 实例
-* 参数二：时间格式，默认为`yyyy-MM-dd hh:mm:ss`
+* 参数二：格式，默认为`yyyy-MM-dd hh:mm:ss`
 
 ```javascript
 import { utils } from 'unique'

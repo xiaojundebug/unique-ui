@@ -16,7 +16,7 @@ function featureTest(property, value, noPrefixes) {
   }
   return mStyle[property].indexOf(value) !== -1
 }
-// 时间格式化
+// 日期格式化
 function dateFormat(date, fmt = 'yyyy-MM-dd hh:mm:ss') {
   var o = {
     'M+': date.getMonth() + 1, // 月份

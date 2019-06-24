@@ -4,7 +4,10 @@
       <h3>{{ group.groupName }}</h3>
       <ul>
         <li class="doc-nav__item" v-for="nav in group.list">
-          <router-link @click.native="$emit('click', nav.routePath)" :to="nav.routePath">{{ nav.name }}</router-link>
+          <router-link
+            @click.native="$emit('click', nav.routePath)"
+            :to="nav.routePath"
+          >{{ nav.name }}</router-link>
         </li>
       </ul>
     </div>
@@ -23,34 +26,40 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$primary-color: #ff924a;
+
 .doc-nav {
   width: 200px;
   height: 100%;
-  padding: 35px 0;
+  padding: 35px 0 35px 15px;
   border-right: 1px solid #f1f4f8;
   overflow-y: auto;
   h3 {
     color: #6a7b83;
     font-weight: 300;
-    text-shadow: 0 0 0.5px rgba(0, 0, 0, 1);
+    text-shadow: 0 0 1px rgba(0, 0, 0, 1);
     font-size: 20px;
   }
   .doc-nav__item {
     a {
+      position: relative;
       display: block;
       height: 40px;
       line-height: 40px;
       color: #455a64;
-      opacity: 0.8;
       font-size: 14px;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      font-weight: 400;
-      transition: opacity 0.2s;
       &.router-link-active,
       &:hover {
-        color: #ff7e4a;
+        color: $primary-color;
+      }
+      &.router-link-active::before {
+        content: '';
+        height: 50%;
+        width: 3px;
+        background-color: $primary-color;
+        position: absolute;
+        left: -15px;
+        top: 25%;
       }
     }
   }

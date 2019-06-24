@@ -11,7 +11,7 @@
       @click-left="goBack"
       @click-right="$router.push('/')"
     >
-      <i class="fa fa-fw fa-home" style="fontSize: 18px; marginRight: 10px" slot="right"></i>
+      <i class="fa fa-fw fa-home" style="font-size: 18px; margin-right: 10px" slot="right"></i>
     </i-nav-bar>
     <router-view></router-view>
 

@@ -26,6 +26,7 @@ import TabPane from 'packages/tab-pane'
 import Tabs from 'packages/tabs'
 import Tag from 'packages/tag'
 import Toast from 'packages/toast'
+import Uploader from 'packages/uploader'
 
 const components = [
   Actionsheet,
@@ -55,7 +56,8 @@ const components = [
   TabPane,
   Tabs,
   Tag,
-  Toast
+  Toast,
+  Uploader
 ]
 
 export {
@@ -86,7 +88,8 @@ export {
   TabPane,
   Tabs,
   Tag,
-  Toast
+  Toast,
+  Uploader
 }
 
 const install = function(Vue) {
