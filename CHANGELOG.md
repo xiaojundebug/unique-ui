@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file. See [standa
 ## [0.10.0](https://github.com/xiaojun1994/unique-ui/compare/v0.9.0...v0.10.0) (2019-08-25)
 
 
-### ⚠ BREAKING CHANGES
+### BREAKING CHANGES
 
 * Tabbar 组件原 color 属性现修改为 inactive-color
 
