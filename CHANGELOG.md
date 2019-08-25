@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.10.0](https://github.com/xiaojun1994/unique-ui/compare/v0.9.0...v0.10.0) (2019-08-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* Tabbar 组件原 color 属性现修改为 inactive-color
+
+* 修改 Tabbar 组件一处 prop ([9fe1f37](https://github.com/xiaojun1994/unique-ui/commit/9fe1f37))
+
+
+### Features
+
+* 新增 prefixInteger 工具方法 ([4f4e6c4](https://github.com/xiaojun1994/unique-ui/commit/4f4e6c4))
+
 ## [0.9.0](https://github.com/xiaojun1994/unique-ui/compare/v0.8.0...v0.9.0) (2019-06-09)
 
 
