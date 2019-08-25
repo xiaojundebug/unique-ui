@@ -19,7 +19,7 @@
       <i-button class="float-button" @click="showQRCode" color="#88dfb9" circle>
         <i-icon name="qrcode" size="23px"/>
       </i-button>
-      <i-modal v-model="show" close-on-click-overlay confirm-text="CLOSE" style="width:250px">
+      <i-modal v-model="show" close-on-click-overlay confirm-text="关闭" style="width:250px">
         <img :src="QRCodeDataURL" alt="qrcode" style="display:block;width:100%">
       </i-modal>
     </template>

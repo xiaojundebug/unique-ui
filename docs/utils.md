@@ -18,12 +18,13 @@
 
 #### 日期格式化
 
-* 参数一：Date 实例
-* 参数二：格式，默认为`yyyy-MM-dd hh:mm:ss`
+> dateFormat(date[, fmt = 'yyyy-MM-dd hh:mm:ss'])
+>
+> - date\<Date\>: Date 实例
+> - fmt\<String\>: 格式，默认为 'yyyy-MM-dd hh:mm:ss'
 
 ```javascript
-import { utils } from 'unique'
-const { dateFormat } = utils
+import { utils: { dateFormat } } from 'unique'
 // 常规用法
 dateFormat(new Date(), 'yyyy-MM-dd hh:mm:ss')
 // 只保留年月日部分
@@ -32,4 +33,17 @@ dateFormat(new Date(), 'yyyy-MM-dd')
 dateFormat(new Date(), 'hh:mm:ss')
 // 随意组合
 dateFormat(new Date(), 'yyyy-MM-dd 00:00:00')
+```
+
+#### 数字前补 0
+
+> prefixInteger(num[, n = 2])
+>
+> - num\<Number\>: 被修饰数字
+> - n\<Number\>: 修饰成多少位，默认 2 位
+
+```javascript
+import { utils: { prefixInteger } } from 'unique'
+prefixInteger(9, 2) // 09
+prefixInteger(15, 3) // 015
 ```

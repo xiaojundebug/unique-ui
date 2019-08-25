@@ -1,5 +1,5 @@
 <script>
-import { event } from 'unique-ui/packages/utils'
+import { on, off } from 'unique-ui/packages/utils'
 import TabTitle from './title'
 const raf = require('raf')
 
@@ -93,7 +93,7 @@ export default {
     setResizeListener(bind) {
       // card 类型没必要监听 resize 事件
       if (this.type === 'card') return
-      ;(bind ? event.on : event.off)(window, 'resize', this.handleResizeEvent, true)
+      ;(bind ? on : off)(window, 'resize', this.handleResizeEvent, true)
     },
     handleResizeEvent() {
       // resize 时禁止显示动画

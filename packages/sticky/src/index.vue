@@ -16,7 +16,7 @@
 
 <script>
 import raf from 'raf'
-import { featureTest, event } from 'unique-ui/packages/utils'
+import { featureTest, on, off } from 'unique-ui/packages/utils'
 const nativeSupported = featureTest('position', 'sticky')
 
 export default {
@@ -85,7 +85,7 @@ export default {
       })
     },
     setListener(bind) {
-      ;(bind ? event.on : event.off)(window, 'scroll', this.scrollHandler, true)
+      ;(bind ? on : off)(window, 'scroll', this.scrollHandler, true)
     }
   }
 }
