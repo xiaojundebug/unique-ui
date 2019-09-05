@@ -13,7 +13,7 @@
     "build:components": "webpack --color --progress --config build/webpack.prod.conf.js",
     "build:theme": "gulp build --gulpfile packages/theme/gulpfile.js",
     "build:lib": "rm -rf lib && npm run build:entry && npm run build:components && npm run build:theme",
-    "build:doc": "webpack --color --progress --config build/webpack.doc.conf.js && gh-pages -d examples/dist",
+    "build:doc": "webpack --color --progress --config build/webpack.doc.conf.js",
     "release": "sh build/release.sh",
     "lint": "eslint --ext .js,.vue src packages",
     "lint:fix": "eslint --fix --ext .js,.vue src packages"
