@@ -37,7 +37,6 @@ $primary-color: #ff924a;
   h3 {
     color: #6a7b83;
     font-weight: 300;
-    text-shadow: 0 0 1px rgba(0, 0, 0, 1);
     font-size: 20px;
   }
   .doc-nav__item {

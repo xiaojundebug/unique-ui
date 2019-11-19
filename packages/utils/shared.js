@@ -1,9 +1,5 @@
-/**
- * 日期格式化
- * @param {Date} date 日期实例
- * @param {String} [fmt = 'yyyy-MM-dd hh:mm:ss'] 格式，默认为 'yyyy-MM-dd hh:mm:ss'
- */
-function dateFormat(date, fmt = 'yyyy-MM-dd hh:mm:ss') {
+// 日期格式化
+export function dateFormat(date, fmt = 'yyyy-MM-dd hh:mm:ss') {
   var o = {
     'M+': date.getMonth() + 1, // 月份
     'd+': date.getDate(), // 日
@@ -26,13 +22,31 @@ function dateFormat(date, fmt = 'yyyy-MM-dd hh:mm:ss') {
   }
   return fmt
 }
-/**
- * 数字前补 0
- * @param {Number} num 被修饰数字
- * @param {Number} [n = 2] 修饰成多少位，默认 2 位
- */
-function prefixInteger(num, n = 2) {
+// 数字前补 0
+export function prefixInteger(num, n = 2) {
   return (Array(n).join(0) + num).slice(-n)
 }
 
-export { dateFormat, prefixInteger }
+// 防抖
+export function debounce(fn, delay) {
+  let timer = null
+  return function(...args) {
+    clearTimeout(timer)
+    timer = setTimeout(() => {
+      fn.call(this, ...args)
+    }, delay)
+  }
+}
+
+// 节流
+export function throttle(fn, delay, cb) {
+  let time = null
+  return function(...args) {
+    const curTime = new Date()
+    if (time && curTime - time < delay) {
+      return typeof cb === 'function' && cb.call(this)
+    }
+    time = curTime
+    fn.call(this, ...args)
+  }
+}

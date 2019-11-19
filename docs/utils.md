@@ -47,3 +47,38 @@ import { utils: { prefixInteger } } from 'unique'
 prefixInteger(9, 2) // 09
 prefixInteger(15, 3) // 015
 ```
+
+#### 防抖
+
+> debounce(fn, delay)
+>
+> - fn\<Function\>: 被装饰方法
+> - delay\<Number\>: 间隔多少毫秒
+
+```javascript
+import { utils: { debounce } } from 'unique'
+const search = debounce(function() {
+  // ...
+}, 300)
+```
+
+#### 节流
+
+> throttle(fn, delay[, cb])
+>
+> - fn\<Function\>: 被装饰方法
+> - delay\<Number\>: 间隔多少毫秒
+> - cb\<Function\>: 节流发挥作用时触发
+
+```javascript
+import { utils: { throttle } } from 'unique'
+const query = throttle(
+  function() {
+    // ...
+  },
+  1000,
+  function() {
+    console.log('请求次数过于频繁')
+  }
+)
+```
