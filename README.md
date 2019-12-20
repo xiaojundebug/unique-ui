@@ -14,7 +14,8 @@
 
 <br />
 
-> _这个 UI 库是我练手所用，质量可想而知，所以不要用在正式环境哦~_<br /> > _大量代码参考（抄袭）了 [vant](https://github.com/youzan/vant) ，少量代码参考了 [element-ui](https://github.com/ElemeFE/element)、[vux](https://github.com/airyland/vux) 等其它库_
+> _这个 UI 库是我练手所用，质量可想而知，所以不要用在正式环境哦~_<br />
+> _其中大量代码参考（抄袭）了 [vant](https://github.com/youzan/vant) ，少量代码参考了 [element-ui](https://github.com/ElemeFE/element)、[vux](https://github.com/airyland/vux) 等其它库_
 
 ### 👀 预览
 
