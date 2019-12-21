@@ -1,15 +1,11 @@
 {
   "presets": [
-    [
-      "@babel/preset-env",
-      {
+    ["@babel/preset-env", {
         "loose": true,
         "modules": false
       }
     ],
-    [
-      "@vue/babel-preset-jsx",
-      {
+    ["@vue/babel-preset-jsx", {
         "functional": false
       }
     ]

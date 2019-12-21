@@ -14,13 +14,13 @@ export default {
         {
           title: 'Name',
           key: 'name',
-          width: 100,
+          width: 120,
         },
         {
           title: 'Age',
           key: 'age',
           align: 'right',
-          width: 50,
+          width: 70,
           render(val) {
             if (val >= 18) {
               return "<span style='color:#36be52'>" + val + '</span>'
@@ -31,8 +31,7 @@ export default {
         },
         {
           title: 'Address',
-          key: 'address',
-          width: 150,
+          key: 'address'
         }
       ],
       tableData: [

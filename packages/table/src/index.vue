@@ -50,10 +50,10 @@ export default {
 
       return {
         width: (width || 100) + 'px',
-        textAlign: align || 'left'
+        textAlign: align || 'left',
+        flexGrow: width ? 0 : 1
       }
     }
   }
 }
 </script>
-

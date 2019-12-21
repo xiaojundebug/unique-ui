@@ -18,7 +18,7 @@ module.exports = {
   devtool: 'cheap-module-eval-source-map',
   resolve: {
     extensions: config.extensions, // 引入模块时可以省略的扩展名
-    alias: config.alias
+    alias: config.alias // 配置路径别名
   },
   // webpack-dev-server
   devServer: {
