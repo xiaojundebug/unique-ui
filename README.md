@@ -12,10 +12,11 @@
     <img alt="contributors" src="https://img.shields.io/github/contributors/xiaojun1994/unique-ui.svg?color=%23409eff">
 </p>
 
-<br />
+> :warning: 由于我工作中很久未再使用 vue 技术栈，且 vue3 也已发布，该仓库没有动力继续维护。
 
-> _这个 UI 库是我练手所用，质量可想而知，所以不要用在正式环境哦~_<br />
-> _其中大量代码参考（抄袭）了 [vant](https://github.com/youzan/vant) ，少量代码参考了 [element-ui](https://github.com/ElemeFE/element)、[vux](https://github.com/airyland/vux) 等其它库_
+_这个 UI 库是我练手所用，质量可想而知，所以不要用在正式环境哦~_
+
+_其中大量代码参考（抄袭）了 [vant](https://github.com/youzan/vant) ，少量代码参考了 [element-ui](https://github.com/ElemeFE/element)、[vux](https://github.com/airyland/vux) 等其它库_
 
 ### 👀 预览
 
