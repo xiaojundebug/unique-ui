@@ -1,12 +1,12 @@
 {
   "name": "unique-ui",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "description": "A mobile component library for Vue2.x",
   "main": "lib/index.js",
   "license": "MIT",
-  "homepage": "https://xiaojun1994.github.io/unique-ui/",
-  "repository": "git@github.com:xiaojun1994/unique-ui.git",
-  "author": "xiaojun1994 <362896731@qq.com>",
+  "homepage": "https://imzxj.github.io/unique-ui/",
+  "repository": "git@github.com:imzxj/unique-ui.git",
+  "author": "imzxj <362896731@qq.com>",
   "scripts": {
     "dev": "webpack-dev-server --hot --inline --progress --config build/webpack.dev.conf.js",
     "build:entry": "node build/build-entry.js",
