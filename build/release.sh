@@ -15,5 +15,5 @@ then
   git rebase master
   git push --follow-tags origin dev
 
-  npm run build:lib && npm publish --registry http://registry.npmjs.org
+  npm run build:lib && npm publish --registry https://registry.npmjs.org
 fi
