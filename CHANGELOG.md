@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.10.1](https://github.com/imzxj/unique-ui/compare/v0.10.0...v0.10.1) (2022-09-16)
+
+
+### Features
+
+* 新增 debounce、throttle 工具方法 ([6d5dae5](https://github.com/imzxj/unique-ui/commit/6d5dae5ce4f54436d844f840d2f9381e9080f4d0))
+
+
+### Bug Fixes
+
+* 修复 Table 组件一处渲染问题 ([a5530bc](https://github.com/imzxj/unique-ui/commit/a5530bc40daa14ccc51fc754d8a0198e1ecacc48))
+
 ## [0.10.0](https://github.com/xiaojun1994/unique-ui/compare/v0.9.0...v0.10.0) (2019-08-25)
 
 
