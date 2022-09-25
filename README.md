@@ -37,9 +37,7 @@ import Unique from 'unique-ui'
 Vue.use(Unique)
 ```
 
-### 💩 反思
-
-多年后对该项目的一些反思
+### 💩 多年后对该项目的一些感想与反思
 
 - commit message 不规范，有些 message 看起来很呆
 - 主题功能薄弱，需要依靠手动构建文件
